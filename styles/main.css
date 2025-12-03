@@ -8274,3 +8274,372 @@ body {
     font-size: 22px;
 }
 
+
+/* ================================================
+   ��Ʒ����ҳ����ʽ
+   ================================================ */
+
+.product-detail-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+    position: relative;
+}
+
+/* 可滚动内容区域 */
+.product-content-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 120px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.product-content-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* ���������� */
+.product-header {
+    background: linear-gradient(135deg, #3dcea4 0%, #2eb88a 100%);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    flex-shrink: 0;
+}
+
+.product-header .back-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.product-header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+
+.product-header .header-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.product-header .more-btn,
+.product-header .search-icon-btn {
+    background: rgba(255, 255, 255, 0.25);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* ��Ʒ�ֲ�ͼ */
+.product-banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: white;
+    flex-shrink: 0;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placeholder-banner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    color: #999;
+    font-size: 60px;
+}
+
+.banner-indicator {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+/* ��Ʒ��Ϣ���� */
+.product-info-section {
+    background: white;
+    padding: 16px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+}
+
+/* ��Ʒ���� */
+.product-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.product-title h2 {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.favorite-btn {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-left: 12px;
+}
+
+.favorite-btn i {
+    font-size: 18px;
+}
+
+/* ���ͼ۸� */
+.product-spec-price {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.spec-badge {
+    padding: 4px 12px;
+    border: 2px solid #f39c12;
+    border-radius: 4px;
+    color: #f39c12;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-price-large {
+    font-size: 20px;
+    color: #ff6b6b;
+    font-weight: 700;
+}
+
+/* ���м���ۼ��µ� */
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: #999;
+}
+
+.breadcrumb {
+    color: #999;
+}
+
+.order-count {
+    color: #999;
+}
+
+.order-count span {
+    color: #333;
+}
+
+/* ��Ʒ������ */
+.product-promo,
+.product-detail-item {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.promo-label,
+.detail-label {
+    width: 100px;
+    flex-shrink: 0;
+    color: #999;
+    font-size: 14px;
+}
+
+.promo-value,
+.detail-value {
+    flex: 1;
+    color: #333;
+    font-size: 14px;
+}
+
+/* ������Ϣ */
+.store-info-section {
+    background: white;
+    padding: 16px;
+    margin-bottom: 0;
+}
+
+.store-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.store-badge {
+    background: #2eb88a;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    flex-shrink: 0;
+}
+
+.store-info {
+    flex: 1;
+}
+
+.store-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 6px 0;
+}
+
+.store-trust {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.store-trust i {
+    color: #f39c12;
+}
+
+.store-rating {
+    display: flex;
+    gap: 2px;
+}
+
+.store-rating i {
+    color: #f39c12;
+    font-size: 14px;
+}
+
+.store-enter-btn {
+    background: #2eb88a;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.store-follow-btn {
+    background: #2eb88a;
+    color: white;
+    border: none;
+    padding: 8px 0;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100px;
+    margin-bottom: 12px;
+}
+
+.store-orders {
+    font-size: 13px;
+    color: #999;
+    text-align: right;
+}
+
+.store-orders span {
+    color: #333;
+}
+
+/* �ײ������� */
+.product-bottom-bar {
+    position: absolute;
+    bottom: 58px;
+    left: 0;
+    right: 0;
+    background: white;
+    display: flex;
+    padding: 10px 16px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+    min-height: 60px;
+    box-sizing: border-box;
+}
+
+.shop-btn {
+    background: white;
+    border: 1px solid #ddd;
+    color: #666;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-right: 12px;
+}
+
+.shop-btn i {
+    font-size: 18px;
+}
+
+.order-now-btn {
+    flex: 1;
+    background: linear-gradient(135deg, #ff7043 0%, #ff5722 100%);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* �ɹ����������� */
+

@@ -1180,7 +1180,7 @@ const pageData = {
                             <i class="fas fa-chevron-right"></i>
                         </div>
                         <div class="products-grid-real">
-                            <div class="product-card-real">
+                            <div class="product-card-real" onclick="loadPage('productDetail')">
                                 <div class="product-img">
                                     <img src="玉米病虫害01.png" alt="农药产品" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                                     <div class="placeholder-img" style="display:none;"><i class="fas fa-box"></i></div>
@@ -1189,7 +1189,7 @@ const pageData = {
                                 <div class="product-price">¥38</div>
                                 <div class="product-shop">农跃帮小店</div>
                             </div>
-                            <div class="product-card-real">
+                            <div class="product-card-real" onclick="loadPage('productDetail')">
                                 <div class="product-img">
                                     <div class="placeholder-img" style="display:flex;"><i class="fas fa-box"></i></div>
                                 </div>
@@ -1197,7 +1197,7 @@ const pageData = {
                                 <div class="product-price">¥88</div>
                                 <div class="product-shop">农跃帮小店</div>
                             </div>
-                            <div class="product-card-real">
+                            <div class="product-card-real" onclick="loadPage('productDetail')">
                                 <div class="product-img">
                                     <div class="placeholder-img" style="display:flex;"><i class="fas fa-box"></i></div>
                                 </div>
@@ -1205,7 +1205,7 @@ const pageData = {
                                 <div class="product-price">¥55</div>
                                 <div class="product-shop">农跃帮小店</div>
                             </div>
-                            <div class="product-card-real">
+                            <div class="product-card-real" onclick="loadPage('productDetail')">
                                 <div class="product-img">
                                     <div class="placeholder-img" style="display:flex;"><i class="fas fa-box"></i></div>
                                 </div>
@@ -1223,7 +1223,7 @@ const pageData = {
                             <i class="fas fa-chevron-right"></i>
                         </div>
                         <div class="products-grid-real">
-                            <div class="product-card-real">
+                            <div class="product-card-real" onclick="loadPage('productDetail')">
                                 <div class="product-img">
                                     <div class="placeholder-img" style="display:flex;"><i class="fas fa-box"></i></div>
                                 </div>
@@ -1231,7 +1231,7 @@ const pageData = {
                                 <div class="product-price">¥99</div>
                                 <div class="product-shop">农跃帮小店</div>
                             </div>
-                            <div class="product-card-real">
+                            <div class="product-card-real" onclick="loadPage('productDetail')">
                                 <div class="product-img">
                                     <div class="placeholder-img" style="display:flex;"><i class="fas fa-box"></i></div>
                                 </div>
@@ -1241,6 +1241,132 @@ const pageData = {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        `
+    },
+    
+    productDetail: {
+        title: '商品详情',
+        subtitle: '商品详细信息',
+        content: `
+            <div class="mobile-page product-detail-page">
+                <!-- 顶部导航栏 -->
+                <div class="product-header">
+                    <button class="back-btn" onclick="loadPage('mall')">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h1>商品详情</h1>
+                    <div class="header-actions">
+                        <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                        <button class="search-icon-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+                <!-- 可滚动内容区域 -->
+                <div class="product-content-scroll">
+                <!-- 商品轮播图 -->
+                <div class="product-banner">
+                    <div class="banner-image">
+                        <img src="玉米病虫害01.png" alt="商品图片" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="placeholder-banner" style="display:none;">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="banner-indicator">1/1</div>
+                </div>
+
+                <!-- 商品信息区域 -->
+                <div class="product-info-section">
+                    <!-- 商品标题 -->
+                    <div class="product-title">
+                        <h2>史丹利高效氯氰菊酯灵氯氰菊酯杀虫剂红蜘蛛菜</h2>
+                        <button class="favorite-btn">
+                            <i class="far fa-star"></i>
+                            <span>收藏</span>
+                        </button>
+                    </div>
+
+                    <!-- 规格和价格 -->
+                    <div class="product-spec-price">
+                        <div class="spec-badge">500ml</div>
+                        <div class="product-price-large">¥25元</div>
+                    </div>
+
+                    <!-- 面包屑和累计下单 -->
+                    <div class="product-meta">
+                        <div class="breadcrumb">农资商品/农药/杀虫剂</div>
+                        <div class="order-count">累计下单：<span>0</span></div>
+                    </div>
+
+                    <!-- 优惠信息 -->
+                    <div class="product-promo">
+                        <div class="promo-label">优惠</div>
+                        <div class="promo-value">暂无</div>
+                    </div>
+
+                    <!-- 防治对象 -->
+                    <div class="product-detail-item">
+                        <div class="detail-label">防治对象</div>
+                        <div class="detail-value">红蜘蛛</div>
+                    </div>
+
+                    <!-- 产品毒性 -->
+                    <div class="product-detail-item">
+                        <div class="detail-label">产品毒性</div>
+                        <div class="detail-value">低毒</div>
+                    </div>
+
+                    <!-- 产品剂型 -->
+                    <div class="product-detail-item">
+                        <div class="detail-label">产品剂型</div>
+                        <div class="detail-value">水剂</div>
+                    </div>
+
+                    <!-- 评价 -->
+                    <div class="product-detail-item">
+                        <div class="detail-label">评价</div>
+                        <div class="detail-value">0</div>
+                    </div>
+                </div>
+
+                <!-- 店铺信息 -->
+                <div class="store-info-section">
+                    <div class="store-header">
+                        <div class="store-badge">
+                            <span class="badge-text">源直达</span>
+                        </div>
+                        <div class="store-info">
+                            <h3>农跃帮小店</h3>
+                            <div class="store-trust">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>诚信优质商家</span>
+                            </div>
+                            <div class="store-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="store-enter-btn">进店</button>
+                    </div>
+                    <button class="store-follow-btn">
+                        <i class="fas fa-plus"></i> 关注
+                    </button>
+                    <div class="store-orders">已下订单：<span>0</span></div>
+                </div>
+                </div>
+                <!-- 结束可滚动内容区域 -->
+
+                <!-- 底部操作栏 -->
+                <div class="product-bottom-bar">
+                    <button class="shop-btn">
+                        <i class="fas fa-comments"></i>
+                        <span>店铺</span>
+                    </button>
+                    <button class="order-now-btn">立即下单</button>
                 </div>
             </div>
         `
