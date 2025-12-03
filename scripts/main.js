@@ -1362,11 +1362,156 @@ const pageData = {
 
                 <!-- 底部操作栏 -->
                 <div class="product-bottom-bar">
-                    <button class="shop-btn">
-                        <i class="fas fa-comments"></i>
+                    <button class="shop-btn" onclick="loadPage('shopDetail')">
+                        <i class="fas fa-store"></i>
                         <span>店铺</span>
                     </button>
                     <button class="order-now-btn">立即下单</button>
+                </div>
+            </div>
+        `
+    },
+    
+    shopDetail: {
+        title: '店铺详情',
+        subtitle: '店铺详细信息',
+        content: `
+            <div class="mobile-page shop-detail-page">
+                <!-- 顶部导航栏 -->
+                <div class="shop-header">
+                    <button class="back-btn" onclick="loadPage('productDetail')">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h1>店铺</h1>
+                    <div class="header-actions">
+                        <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                        <button class="search-icon-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+                <!-- 可滚动内容区域 -->
+                <div class="shop-content-scroll">
+                    <!-- 店铺信息区域 -->
+                    <div class="shop-info-card">
+                        <div class="shop-main-info">
+                            <div class="shop-logo-badge">
+                                <span class="badge-text">源直达</span>
+                            </div>
+                            <div class="shop-info-text">
+                                <h2 class="shop-name">农跃帮小店</h2>
+                                <div class="shop-level">
+                                    <span class="level-label">店铺等级</span>
+                                    <span class="level-value">白银会员</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="shop-intro-section">
+                            <span class="intro-label">店铺简介：</span>
+                            <span class="intro-text">新鲜农产品，专业农资，智能农机，引领农业未来，让农业更美好！</span>
+                        </div>
+                        
+                        <div class="shop-action-buttons">
+                            <button class="follow-btn">
+                                <i class="fas fa-plus"></i> 关注
+                            </button>
+                            <button class="customer-service-btn">
+                                <i class="fas fa-headset"></i> 在线客服
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 分类标签 -->
+                    <div class="shop-category-tabs">
+                        <div class="shop-tab active">全部</div>
+                        <div class="shop-tab">全程托管</div>
+                        <div class="shop-tab">菜单式托管</div>
+                        <div class="shop-tab">农事服务</div>
+                        <div class="shop-tab">农资商品</div>
+                    </div>
+
+                    <!-- 商品网格展示 -->
+                    <div class="shop-products-grid">
+                        <div class="shop-product-card">
+                            <div class="shop-product-img">
+                                <div class="placeholder-img" style="display:flex;">
+                                    <i class="fas fa-helicopter"></i>
+                                </div>
+                            </div>
+                            <div class="shop-product-name">无人机撒药</div>
+                            <div class="shop-product-price">¥20元/亩</div>
+                        </div>
+                        
+                        <div class="shop-product-card">
+                            <div class="shop-product-img">
+                                <div class="placeholder-img" style="display:flex;">
+                                    <i class="fas fa-helicopter"></i>
+                                </div>
+                            </div>
+                            <div class="shop-product-name">无人机撒药</div>
+                            <div class="shop-product-price">¥15元/亩</div>
+                        </div>
+                        
+                        <div class="shop-product-card">
+                            <div class="shop-product-img">
+                                <div class="placeholder-img" style="display:flex;">
+                                    <i class="fas fa-helicopter"></i>
+                                </div>
+                            </div>
+                            <div class="shop-product-name">无人机撒药</div>
+                            <div class="shop-product-price">¥18元/亩</div>
+                        </div>
+                        
+                        <div class="shop-product-card">
+                            <div class="shop-product-img">
+                                <div class="placeholder-img" style="display:flex;">
+                                    <i class="fas fa-helicopter"></i>
+                                </div>
+                            </div>
+                            <div class="shop-product-name">无人机巡田撒药</div>
+                            <div class="shop-product-price">¥20元/亩</div>
+                        </div>
+                        
+                        <div class="shop-product-card">
+                            <div class="shop-product-img">
+                                <div class="placeholder-img" style="display:flex;">
+                                    <i class="fas fa-cog"></i>
+                                </div>
+                            </div>
+                            <div class="shop-product-name">无人机服务</div>
+                            <div class="shop-product-price">¥16元/亩</div>
+                        </div>
+                        
+                        <div class="shop-product-card">
+                            <div class="shop-product-img">
+                                <div class="placeholder-img" style="display:flex;">
+                                    <i class="fas fa-helicopter"></i>
+                                </div>
+                            </div>
+                            <div class="shop-product-name">无人机巡田</div>
+                            <div class="shop-product-price">¥23元/亩</div>
+                        </div>
+                        
+                        <div class="shop-product-card">
+                            <div class="shop-product-img">
+                                <div class="placeholder-img" style="display:flex;">
+                                    <i class="fas fa-tractor"></i>
+                                </div>
+                            </div>
+                            <div class="shop-product-name">拖拉机耕地</div>
+                            <div class="shop-product-price">¥45元/亩</div>
+                        </div>
+                        
+                        <div class="shop-product-card">
+                            <div class="shop-product-img">
+                                <div class="placeholder-img" style="display:flex;">
+                                    <i class="fas fa-tractor"></i>
+                                </div>
+                            </div>
+                            <div class="shop-product-name">联合收割机</div>
+                            <div class="shop-product-price">¥58元/亩</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         `
