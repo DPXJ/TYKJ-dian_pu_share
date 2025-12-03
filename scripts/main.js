@@ -1126,101 +1126,118 @@ const pageData = {
     },
     
     mall: {
-        title: '农业商城',
-        subtitle: '优质农资一站式采购',
+        title: '商城',
+        subtitle: '农资商品',
         content: `
-            <div class="mobile-page mall-page">
-                <div class="mobile-header">
-                    <h1>农业商城</h1>
-                    <div class="subtitle">优质农资一站式采购</div>
+            <div class="mobile-page real-mall-page">
+                <!-- 顶部导航栏 -->
+                <div class="mall-header">
+                    <button class="back-btn"><i class="fas fa-chevron-left"></i></button>
+                    <h1>商城</h1>
+                    <div class="header-actions">
+                        <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                        <button class="search-icon-btn"><i class="fas fa-search"></i></button>
+                    </div>
                 </div>
-                <div class="mobile-content">
-                    <!-- 搜索栏 -->
-                    <div class="search-section">
-                        <div class="search-bar">
-                            <i class="fas fa-search"></i>
-                            <input type="text" placeholder="搜索农资产品...">
+
+                <!-- 服务分类标签 -->
+                <div class="service-tabs-wrapper">
+                    <div class="service-tabs">
+                        <div class="service-tab">托管服务</div>
+                        <div class="service-tab">农事服务</div>
+                        <div class="service-tab active">农资商品</div>
+                        <div class="service-tab">农机租售</div>
+                        <div class="service-tab">保险服务</div>
+                    </div>
+                </div>
+
+                <!-- 子分类标签 -->
+                <div class="sub-category-section">
+                    <div class="sub-category-tabs">
+                        <div class="sub-tab active">农药</div>
+                        <div class="sub-tab">肥料</div>
+                        <div class="sub-tab">种子</div>
+                    </div>
+                    <button class="filter-btn"><i class="fas fa-sliders-h"></i></button>
+                </div>
+
+                <!-- 搜索区域 -->
+                <div class="mall-search-section">
+                    <select class="search-dropdown">
+                        <option>搜商品</option>
+                        <option>搜店铺</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="">
+                    <button class="search-btn">搜索</button>
+                </div>
+
+                <!-- 商品内容区域 -->
+                <div class="mall-content">
+                    <!-- 杀虫剂分类 -->
+                    <div class="product-category">
+                        <div class="category-header">
+                            <h3>杀虫剂</h3>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="products-grid-real">
+                            <div class="product-card-real">
+                                <div class="product-img">
+                                    <img src="玉米病虫害01.png" alt="农药产品" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                                    <div class="placeholder-img" style="display:none;"><i class="fas fa-box"></i></div>
+                                </div>
+                                <div class="product-name">史丹利高效氯氰菊酯...</div>
+                                <div class="product-price">¥38</div>
+                                <div class="product-shop">农跃帮小店</div>
+                            </div>
+                            <div class="product-card-real">
+                                <div class="product-img">
+                                    <div class="placeholder-img" style="display:flex;"><i class="fas fa-box"></i></div>
+                                </div>
+                                <div class="product-name">史丹利高效氯氰菊酯...</div>
+                                <div class="product-price">¥88</div>
+                                <div class="product-shop">农跃帮小店</div>
+                            </div>
+                            <div class="product-card-real">
+                                <div class="product-img">
+                                    <div class="placeholder-img" style="display:flex;"><i class="fas fa-box"></i></div>
+                                </div>
+                                <div class="product-name">史丹利高效氯氰菊酯...</div>
+                                <div class="product-price">¥55</div>
+                                <div class="product-shop">农跃帮小店</div>
+                            </div>
+                            <div class="product-card-real">
+                                <div class="product-img">
+                                    <div class="placeholder-img" style="display:flex;"><i class="fas fa-box"></i></div>
+                                </div>
+                                <div class="product-name">史丹利高效氯氰菊酯...</div>
+                                <div class="product-price">¥25</div>
+                                <div class="product-shop">农跃帮小店</div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- 分类导航 -->
-                    <div class="category-nav">
-                        <div class="category-item active">
-                            <i class="fas fa-seedling"></i>
-                            <span>种子</span>
+                    <!-- 杀菌剂分类 -->
+                    <div class="product-category">
+                        <div class="category-header">
+                            <h3>杀菌剂</h3>
+                            <i class="fas fa-chevron-right"></i>
                         </div>
-                        <div class="category-item">
-                            <i class="fas fa-flask"></i>
-                            <span>农药</span>
-                        </div>
-                        <div class="category-item">
-                            <i class="fas fa-leaf"></i>
-                            <span>肥料</span>
-                        </div>
-                        <div class="category-item">
-                            <i class="fas fa-tools"></i>
-                            <span>农机</span>
-                        </div>
-                    </div>
-
-                    <!-- 商品列表 -->
-                    <div class="products-section">
-                        <h3>推荐商品</h3>
-                        <div class="products-grid">
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <i class="fas fa-seedling"></i>
+                        <div class="products-grid-real">
+                            <div class="product-card-real">
+                                <div class="product-img">
+                                    <div class="placeholder-img" style="display:flex;"><i class="fas fa-box"></i></div>
                                 </div>
-                                <div class="product-info">
-                                    <h4>优质玉米种子</h4>
-                                    <p class="product-desc">高产抗病，适合本地种植</p>
-                                    <div class="product-price">¥45.00</div>
-                                </div>
-                                <button class="add-to-cart-btn">
-                                    <i class="fas fa-plus"></i>
-                                </button>
+                                <div class="product-name">苯醚甲环唑100g*5</div>
+                                <div class="product-price">¥99</div>
+                                <div class="product-shop">农跃帮小店</div>
                             </div>
-
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <i class="fas fa-flask"></i>
+                            <div class="product-card-real">
+                                <div class="product-img">
+                                    <div class="placeholder-img" style="display:flex;"><i class="fas fa-box"></i></div>
                                 </div>
-                                <div class="product-info">
-                                    <h4>生物农药</h4>
-                                    <p class="product-desc">环保安全，高效防治</p>
-                                    <div class="product-price">¥28.50</div>
-                                </div>
-                                <button class="add-to-cart-btn">
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <i class="fas fa-leaf"></i>
-                                </div>
-                                <div class="product-info">
-                                    <h4>有机肥料</h4>
-                                    <p class="product-desc">天然有机，改善土壤</p>
-                                    <div class="product-price">¥35.00</div>
-                                </div>
-                                <button class="add-to-cart-btn">
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <i class="fas fa-tools"></i>
-                                </div>
-                                <div class="product-info">
-                                    <h4>小型播种机</h4>
-                                    <p class="product-desc">轻便高效，操作简单</p>
-                                    <div class="product-price">¥1,280.00</div>
-                                </div>
-                                <button class="add-to-cart-btn">
-                                    <i class="fas fa-plus"></i>
-                                </button>
+                                <div class="product-name">苯醚甲环唑100g*3</div>
+                                <div class="product-price">¥65</div>
+                                <div class="product-shop">农跃帮小店</div>
                             </div>
                         </div>
                     </div>
