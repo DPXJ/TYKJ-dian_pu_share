@@ -10321,5 +10321,650 @@ body {
     box-shadow: 0 4px 16px rgba(46, 184, 138, 0.4);
 }
 
+/* ================================================
+   我的店铺页面样式
+   ================================================ */
+
+.my-shop-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+}
+
+.my-shop-header {
+    background: linear-gradient(135deg, #2eb88a 0%, #3dcea4 100%);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    flex-shrink: 0;
+}
+
+.my-shop-header .back-btn,
+.my-shop-header .more-btn,
+.my-shop-header .target-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.my-shop-header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+
+.my-shop-header .header-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.my-shop-header .header-actions button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-info-card-main {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 12px 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.shop-logo-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.shop-logo-badge-main {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.shop-name-main {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+}
+
+.shop-status-row,
+.shop-level-row,
+.shop-deposit-row {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.status-value {
+    color: #2eb88a;
+    font-weight: 600;
+}
+
+.shop-cert-badge {
+    background: #e8f5e9;
+    color: #2eb88a;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.renew-link,
+.deposit-link {
+    color: #2eb88a;
+    text-decoration: none;
+    margin-left: auto;
+}
+
+.deposit-link {
+    color: #1976d2;
+}
+
+.order-stats-card,
+.common-apps-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 0 16px 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.order-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.order-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.order-stat-item.full-width {
+    grid-column: 1 / -1;
+    margin-top: 8px;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.stat-number {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #999;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.app-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.app-item:hover {
+    transform: translateY(-2px);
+}
+
+.app-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+.app-icon.orange {
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+}
+
+.app-icon.blue {
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+}
+
+.app-icon.light-blue {
+    background: linear-gradient(135deg, #03a9f4 0%, #0288d1 100%);
+}
+
+.app-icon.red {
+    background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+}
+
+.app-icon.green {
+    background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+}
+
+.app-icon.cyan {
+    background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+}
+
+.app-name {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+
+/* ================================================
+   商品管理页面样式
+   ================================================ */
+
+.product-management-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+}
+
+.product-mgmt-header,
+.service-mgmt-header {
+    background: linear-gradient(135deg, #2eb88a 0%, #3dcea4 100%);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    flex-shrink: 0;
+}
+
+.product-mgmt-header .back-btn,
+.product-mgmt-header .more-btn,
+.product-mgmt-header .target-btn,
+.service-mgmt-header .back-btn,
+.service-mgmt-header .more-btn,
+.service-mgmt-header .target-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.product-mgmt-header h1,
+.service-mgmt-header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+
+.product-mgmt-header .header-actions,
+.service-mgmt-header .header-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.product-mgmt-header .header-actions button,
+.service-mgmt-header .header-actions button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-tabs {
+    display: flex;
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 16px;
+}
+
+.product-tab {
+    flex: 1;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.product-tab.active {
+    color: #2eb88a;
+    font-weight: 600;
+}
+
+.product-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #2eb88a;
+}
+
+.tab-badge {
+    background: #f44336;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.category-filter-section {
+    background: white;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.filter-label {
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+}
+
+.filter-select-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 8px 32px 8px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #666;
+    background: #f9f9f9;
+}
+
+.filter-select-wrapper i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 12px;
+}
+
+.product-mgmt-list {
+    padding: 12px 16px;
+}
+
+.product-mgmt-item {
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.product-mgmt-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    background: #f5f5f5;
+}
+
+.product-mgmt-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-mgmt-image .placeholder-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e8f5f1 0%, #d4ede4 100%);
+    color: #2eb88a;
+    font-size: 32px;
+}
+
+.product-mgmt-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.product-mgmt-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.product-mgmt-spec {
+    font-size: 13px;
+    color: #999;
+}
+
+.product-mgmt-price,
+.product-mgmt-sales {
+    font-size: 13px;
+    color: #666;
+}
+
+.product-mgmt-stock {
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.adjust-stock-link {
+    color: #1976d2;
+    text-decoration: none;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.product-mgmt-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.view-link {
+    color: #1976d2;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.offline-btn {
+    background: #ffebee;
+    color: #f44336;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* ================================================
+   服务管理页面样式
+   ================================================ */
+
+.service-management-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+}
+
+.service-main-tabs {
+    display: flex;
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 16px;
+}
+
+.service-main-tab {
+    flex: 1;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.service-main-tab.active {
+    color: #2eb88a;
+    font-weight: 600;
+}
+
+.service-main-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #2eb88a;
+}
+
+.tab-count {
+    font-size: 12px;
+    color: #999;
+}
+
+.service-type-filters {
+    display: flex;
+    gap: 8px;
+    padding: 12px 16px;
+    background: white;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.service-type-btn {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #2eb88a;
+    border-radius: 6px;
+    background: white;
+    color: #666;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.service-type-btn.active {
+    background: #2eb88a;
+    color: white;
+}
+
+.service-mgmt-list {
+    padding: 12px 16px;
+}
+
+.service-mgmt-item {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.service-mgmt-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.service-mgmt-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.service-detail-row {
+    font-size: 13px;
+    color: #666;
+    display: flex;
+    gap: 8px;
+}
+
+.detail-label {
+    color: #999;
+    min-width: 80px;
+}
+
+.detail-value {
+    color: #666;
+    flex: 1;
+}
+
+.service-mgmt-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.service-offline-btn {
+    flex: 1;
+    background: #ffebee;
+    color: #f44336;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.service-view-btn {
+    flex: 1;
+    background: #2eb88a;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.no-more-text {
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+    padding: 20px;
+}
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(46, 184, 138, 0.4);
+}
+
 /* �ɹ����������� */
 

@@ -1184,6 +1184,9 @@ const pageData = {
                                 <div class="product-img">
                                     <img src="玉米病虫害01.png" alt="农药产品" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                                     <div class="placeholder-img" style="display:none;"><i class="fas fa-box"></i></div>
+                                    <button class="product-share-icon" onclick="event.stopPropagation(); showShareModal('product', '史丹利高效氯氰菊酯');">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
                                 </div>
                                 <div class="product-name">史丹利高效氯氰菊酯...</div>
                                 <div class="product-price">¥38</div>
@@ -1192,6 +1195,9 @@ const pageData = {
                             <div class="product-card-real" onclick="loadPage('productDetail')">
                                 <div class="product-img">
                                     <div class="placeholder-img" style="display:flex;"><i class="fas fa-box"></i></div>
+                                    <button class="product-share-icon" onclick="event.stopPropagation(); showShareModal('product', '史丹利高效氯氰菊酯');">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
                                 </div>
                                 <div class="product-name">史丹利高效氯氰菊酯...</div>
                                 <div class="product-price">¥88</div>
@@ -1200,6 +1206,9 @@ const pageData = {
                             <div class="product-card-real" onclick="loadPage('productDetail')">
                                 <div class="product-img">
                                     <div class="placeholder-img" style="display:flex;"><i class="fas fa-box"></i></div>
+                                    <button class="product-share-icon" onclick="event.stopPropagation(); showShareModal('product', '史丹利高效氯氰菊酯');">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
                                 </div>
                                 <div class="product-name">史丹利高效氯氰菊酯...</div>
                                 <div class="product-price">¥55</div>
@@ -1208,6 +1217,9 @@ const pageData = {
                             <div class="product-card-real" onclick="loadPage('productDetail')">
                                 <div class="product-img">
                                     <div class="placeholder-img" style="display:flex;"><i class="fas fa-box"></i></div>
+                                    <button class="product-share-icon" onclick="event.stopPropagation(); showShareModal('product', '史丹利高效氯氰菊酯');">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
                                 </div>
                                 <div class="product-name">史丹利高效氯氰菊酯...</div>
                                 <div class="product-price">¥25</div>
@@ -1226,6 +1238,9 @@ const pageData = {
                             <div class="product-card-real" onclick="loadPage('productDetail')">
                                 <div class="product-img">
                                     <div class="placeholder-img" style="display:flex;"><i class="fas fa-box"></i></div>
+                                    <button class="product-share-icon" onclick="event.stopPropagation(); showShareModal('product', '苯醚甲环唑100g*5');">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
                                 </div>
                                 <div class="product-name">苯醚甲环唑100g*5</div>
                                 <div class="product-price">¥99</div>
@@ -1234,6 +1249,9 @@ const pageData = {
                             <div class="product-card-real" onclick="loadPage('productDetail')">
                                 <div class="product-img">
                                     <div class="placeholder-img" style="display:flex;"><i class="fas fa-box"></i></div>
+                                    <button class="product-share-icon" onclick="event.stopPropagation(); showShareModal('product', '苯醚甲环唑100g*3');">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
                                 </div>
                                 <div class="product-name">苯醚甲环唑100g*3</div>
                                 <div class="product-price">¥65</div>
@@ -1545,6 +1563,404 @@ const pageData = {
                             <div class="shop-product-price">¥58元/亩</div>
                         </div>
                     </div>
+                </div>
+            </div>
+        `
+    },
+    
+    myShop: {
+        title: '我的店铺',
+        subtitle: '在线店铺',
+        content: `
+            <div class="mobile-page my-shop-page">
+                <!-- 顶部导航栏 -->
+                <div class="my-shop-header">
+                    <button class="back-btn" onclick="goBack()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h1>在线店铺</h1>
+                    <div class="header-actions">
+                        <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                        <button class="target-btn"><i class="fas fa-bullseye"></i></button>
+                    </div>
+                </div>
+
+                <!-- 店铺信息卡片 -->
+                <div class="mobile-content">
+                    <div class="shop-info-card-main">
+                        <div class="shop-logo-name">
+                            <div class="shop-logo-badge-main">
+                                <span class="badge-text">源跃</span>
+                            </div>
+                            <div class="shop-name-main">农跃帮小店</div>
+                        </div>
+                        <div class="shop-status-row">
+                            <span class="status-label">营运状态：</span>
+                            <span class="status-value">上线运营中</span>
+                        </div>
+                        <div class="shop-cert-badge">
+                            <span class="cert-text">资质审核：认证通过</span>
+                        </div>
+                        <div class="shop-level-row">
+                            <span class="level-label">店铺等级：</span>
+                            <span class="level-value">白银会员(2025-08-29~2026-08-29)</span>
+                            <a href="javascript:void(0)" class="renew-link">续费</a>
+                        </div>
+                        <div class="shop-deposit-row">
+                            <span class="deposit-label">诚信保证金：</span>
+                            <span class="deposit-value">0元</span>
+                            <a href="javascript:void(0)" class="deposit-link">关闭服务/退费</a>
+                        </div>
+                    </div>
+
+                    <!-- 农服订单卡片 -->
+                    <div class="order-stats-card">
+                        <div class="card-title">农服订单</div>
+                        <div class="order-stats-grid">
+                            <div class="order-stat-item">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">待受理(单)</span>
+                            </div>
+                            <div class="order-stat-item">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">待开始(单)</span>
+                            </div>
+                            <div class="order-stat-item">
+                                <span class="stat-number">1</span>
+                                <span class="stat-label">进行中(单)</span>
+                            </div>
+                            <div class="order-stat-item">
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">已完成(单)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 电商订单卡片 -->
+                    <div class="order-stats-card">
+                        <div class="card-title">电商订单</div>
+                        <div class="order-stats-grid">
+                            <div class="order-stat-item">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">待支付(单)</span>
+                            </div>
+                            <div class="order-stat-item">
+                                <span class="stat-number">40</span>
+                                <span class="stat-label">待发货(单)</span>
+                            </div>
+                            <div class="order-stat-item">
+                                <span class="stat-number">20</span>
+                                <span class="stat-label">待签收(单)</span>
+                            </div>
+                            <div class="order-stat-item">
+                                <span class="stat-number">35</span>
+                                <span class="stat-label">待售后(单)</span>
+                            </div>
+                            <div class="order-stat-item full-width">
+                                <span class="stat-number">871</span>
+                                <span class="stat-label">订单总数(单)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 常用应用卡片 -->
+                    <div class="common-apps-card">
+                        <div class="card-title">常用应用</div>
+                        <div class="apps-grid">
+                            <div class="app-item" onclick="loadPage('productManagement')">
+                                <div class="app-icon orange"><i class="fas fa-folder-open"></i></div>
+                                <span class="app-name">商品管理</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon blue"><i class="fas fa-file-alt"></i></div>
+                                <span class="app-name">电商订单</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon blue"><i class="fas fa-paper-plane"></i></div>
+                                <span class="app-name">发布商品</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon light-blue"><i class="fas fa-sitemap"></i></div>
+                                <span class="app-name">商品分类</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon orange"><i class="fas fa-comment-dots"></i></div>
+                                <span class="app-name">评价回复</span>
+                            </div>
+                            <div class="app-item" onclick="loadPage('serviceManagement')">
+                                <div class="app-icon red"><i class="fas fa-heart"></i></div>
+                                <span class="app-name">服务管理</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon green"><i class="fas fa-hand-holding-up"></i></div>
+                                <span class="app-name">服务订单</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon orange"><i class="fas fa-hand-holding-heart"></i></div>
+                                <span class="app-name">发布服务</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon cyan"><i class="fas fa-handshake"></i></div>
+                                <span class="app-name">合作管理</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon green"><i class="fas fa-yen-sign"></i></div>
+                                <span class="app-name">资金管理</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon blue"><i class="fas fa-cog"></i></div>
+                                <span class="app-name">店铺设置</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+    },
+    
+    productManagement: {
+        title: '商品管理',
+        subtitle: '管理所有商品',
+        content: `
+            <div class="mobile-page product-management-page">
+                <!-- 顶部导航栏 -->
+                <div class="product-mgmt-header">
+                    <button class="back-btn" onclick="goBack()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h1>商品管理</h1>
+                    <div class="header-actions">
+                        <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                        <button class="target-btn"><i class="fas fa-bullseye"></i></button>
+                    </div>
+                </div>
+
+                <!-- 功能选项卡 -->
+                <div class="product-tabs">
+                    <div class="product-tab active">
+                        <span>已上架</span>
+                        <span class="tab-badge">110</span>
+                    </div>
+                    <div class="product-tab">
+                        <span>已下架</span>
+                        <span class="tab-badge">3</span>
+                    </div>
+                    <div class="product-tab">
+                        <span>待上架</span>
+                    </div>
+                </div>
+
+                <!-- 店内分类筛选 -->
+                <div class="category-filter-section">
+                    <span class="filter-label">店内分类</span>
+                    <div class="filter-select-wrapper">
+                        <input type="text" class="filter-select" placeholder="一级分类 请选择" readonly>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <!-- 商品列表 -->
+                <div class="mobile-content">
+                    <div class="product-mgmt-list">
+                        <div class="product-mgmt-item">
+                            <div class="product-mgmt-image">
+                                <img src="玉米病虫害01.png" alt="商品" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                                <div class="placeholder-img" style="display:none;">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="product-mgmt-info">
+                                <div class="product-mgmt-title">鲁花13号10斤</div>
+                                <div class="product-mgmt-spec">鲁花13号10斤</div>
+                                <div class="product-mgmt-price">零售价: 226元/袋</div>
+                                <div class="product-mgmt-sales">已售: 0袋</div>
+                                <div class="product-mgmt-stock">
+                                    <span>库存量: 99袋</span>
+                                    <a href="javascript:void(0)" class="adjust-stock-link">
+                                        <i class="fas fa-bolt"></i> 调整库存
+                                    </a>
+                                </div>
+                                <div class="product-mgmt-actions">
+                                    <a href="javascript:void(0)" class="view-link">查看</a>
+                                    <button class="offline-btn">下架</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-mgmt-item">
+                            <div class="product-mgmt-image">
+                                <img src="玉米病虫害01.png" alt="商品" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                                <div class="placeholder-img" style="display:none;">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="product-mgmt-info">
+                                <div class="product-mgmt-title">鲁花13号10斤</div>
+                                <div class="product-mgmt-spec">鲁花13号10斤</div>
+                                <div class="product-mgmt-price">零售价: 226元/袋</div>
+                                <div class="product-mgmt-sales">已售: 0袋</div>
+                                <div class="product-mgmt-stock">
+                                    <span>库存量: 99袋</span>
+                                    <a href="javascript:void(0)" class="adjust-stock-link">
+                                        <i class="fas fa-bolt"></i> 调整库存
+                                    </a>
+                                </div>
+                                <div class="product-mgmt-actions">
+                                    <a href="javascript:void(0)" class="view-link">查看</a>
+                                    <button class="offline-btn">下架</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-mgmt-item">
+                            <div class="product-mgmt-image">
+                                <div class="placeholder-img" style="display:flex;">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="product-mgmt-info">
+                                <div class="product-mgmt-title">濮科花20号花生</div>
+                                <div class="product-mgmt-spec">红色原装精选20斤</div>
+                                <div class="product-mgmt-price">零售价: 226元/袋</div>
+                                <div class="product-mgmt-sales">已售: 0袋</div>
+                                <div class="product-mgmt-stock">
+                                    <span>库存量: 99袋</span>
+                                    <a href="javascript:void(0)" class="adjust-stock-link">
+                                        <i class="fas fa-bolt"></i> 调整库存
+                                    </a>
+                                </div>
+                                <div class="product-mgmt-actions">
+                                    <a href="javascript:void(0)" class="view-link">查看</a>
+                                    <button class="offline-btn">下架</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-mgmt-item">
+                            <div class="product-mgmt-image">
+                                <div class="placeholder-img" style="display:flex;">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="product-mgmt-info">
+                                <div class="product-mgmt-title">濮科花20号花生</div>
+                                <div class="product-mgmt-spec">红色原装精选20斤</div>
+                                <div class="product-mgmt-price">零售价: 226元/袋</div>
+                                <div class="product-mgmt-sales">已售: 0袋</div>
+                                <div class="product-mgmt-stock">
+                                    <span>库存量: 99袋</span>
+                                    <a href="javascript:void(0)" class="adjust-stock-link">
+                                        <i class="fas fa-bolt"></i> 调整库存
+                                    </a>
+                                </div>
+                                <div class="product-mgmt-actions">
+                                    <a href="javascript:void(0)" class="view-link">查看</a>
+                                    <button class="offline-btn">下架</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+    },
+    
+    serviceManagement: {
+        title: '服务管理',
+        subtitle: '管理所有服务',
+        content: `
+            <div class="mobile-page service-management-page">
+                <!-- 顶部导航栏 -->
+                <div class="service-mgmt-header">
+                    <button class="back-btn" onclick="goBack()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h1>服务管理</h1>
+                    <div class="header-actions">
+                        <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                        <button class="target-btn"><i class="fas fa-bullseye"></i></button>
+                    </div>
+                </div>
+
+                <!-- 主导航标签 -->
+                <div class="service-main-tabs">
+                    <div class="service-main-tab active">
+                        <span>已上架</span>
+                        <span class="tab-count">(16)</span>
+                    </div>
+                    <div class="service-main-tab">
+                        <span>待上架</span>
+                        <span class="tab-count">(0)</span>
+                    </div>
+                    <div class="service-main-tab">
+                        <span>已下架</span>
+                        <span class="tab-count">(1)</span>
+                    </div>
+                </div>
+
+                <!-- 服务类型筛选 -->
+                <div class="service-type-filters">
+                    <button class="service-type-btn active">全程托管(2)</button>
+                    <button class="service-type-btn">菜单式托管(0)</button>
+                    <button class="service-type-btn">农事服务(14)</button>
+                </div>
+
+                <!-- 服务列表 -->
+                <div class="mobile-content">
+                    <div class="service-mgmt-list">
+                        <div class="service-mgmt-item">
+                            <div class="service-mgmt-title">测试服务</div>
+                            <div class="service-mgmt-details">
+                                <div class="service-detail-row">
+                                    <span class="detail-label">服务作物:</span>
+                                    <span class="detail-value">冬小麦</span>
+                                </div>
+                                <div class="service-detail-row">
+                                    <span class="detail-label">收费标准:</span>
+                                    <span class="detail-value">0.01元/亩</span>
+                                </div>
+                                <div class="service-detail-row">
+                                    <span class="detail-label">最低受理:</span>
+                                    <span class="detail-value">1亩</span>
+                                </div>
+                                <div class="service-detail-row">
+                                    <span class="detail-label">服务区域:</span>
+                                    <span class="detail-value">许昌市(建安区)</span>
+                                </div>
+                            </div>
+                            <div class="service-mgmt-actions">
+                                <button class="service-offline-btn">下架</button>
+                                <button class="service-view-btn">查看详情</button>
+                            </div>
+                        </div>
+
+                        <div class="service-mgmt-item">
+                            <div class="service-mgmt-title">玉米收割</div>
+                            <div class="service-mgmt-details">
+                                <div class="service-detail-row">
+                                    <span class="detail-label">服务作物:</span>
+                                    <span class="detail-value">玉米</span>
+                                </div>
+                                <div class="service-detail-row">
+                                    <span class="detail-label">收费标准:</span>
+                                    <span class="detail-value">60元/亩</span>
+                                </div>
+                                <div class="service-detail-row">
+                                    <span class="detail-label">最低受理:</span>
+                                    <span class="detail-value">2000亩</span>
+                                </div>
+                                <div class="service-detail-row">
+                                    <span class="detail-label">服务区域:</span>
+                                    <span class="detail-value">鹤壁市(鹤山区,山城区,淇滨区,浚县,淇县)</span>
+                                </div>
+                            </div>
+                            <div class="service-mgmt-actions">
+                                <button class="service-offline-btn">下架</button>
+                                <button class="service-view-btn">查看详情</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="no-more-text">没有更多了</div>
                 </div>
             </div>
         `
