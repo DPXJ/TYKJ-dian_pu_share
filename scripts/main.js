@@ -1258,6 +1258,9 @@ const pageData = {
                     </button>
                     <h1>商品详情</h1>
                     <div class="header-actions">
+                        <button class="share-btn" onclick="showShareModal('product', '史丹利高效氯氰菊酯')">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
                         <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
                         <button class="search-icon-btn"><i class="fas fa-search"></i></button>
                     </div>
@@ -1384,6 +1387,9 @@ const pageData = {
                     </button>
                     <h1>店铺</h1>
                     <div class="header-actions">
+                        <button class="share-btn" onclick="showShareModal('shop', '农跃帮小店')">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
                         <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
                         <button class="search-icon-btn"><i class="fas fa-search"></i></button>
                     </div>
@@ -1412,6 +1418,9 @@ const pageData = {
                         </div>
                         
                         <div class="shop-action-buttons">
+                            <button class="shop-share-btn" onclick="showShareModal('shop', '农跃帮小店')">
+                                <i class="fas fa-share-alt"></i> 分享
+                            </button>
                             <button class="follow-btn">
                                 <i class="fas fa-plus"></i> 关注
                             </button>
@@ -1437,6 +1446,9 @@ const pageData = {
                                 <div class="placeholder-img" style="display:flex;">
                                     <i class="fas fa-helicopter"></i>
                                 </div>
+                                <button class="product-share-icon" onclick="event.stopPropagation(); showShareModal('product', '无人机撒药');">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
                             </div>
                             <div class="shop-product-name">无人机撒药</div>
                             <div class="shop-product-price">¥20元/亩</div>
@@ -1447,6 +1459,9 @@ const pageData = {
                                 <div class="placeholder-img" style="display:flex;">
                                     <i class="fas fa-helicopter"></i>
                                 </div>
+                                <button class="product-share-icon" onclick="event.stopPropagation(); showShareModal('product', '无人机撒药');">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
                             </div>
                             <div class="shop-product-name">无人机撒药</div>
                             <div class="shop-product-price">¥15元/亩</div>
@@ -1457,6 +1472,9 @@ const pageData = {
                                 <div class="placeholder-img" style="display:flex;">
                                     <i class="fas fa-helicopter"></i>
                                 </div>
+                                <button class="product-share-icon" onclick="event.stopPropagation(); showShareModal('product', '无人机撒药');">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
                             </div>
                             <div class="shop-product-name">无人机撒药</div>
                             <div class="shop-product-price">¥18元/亩</div>
@@ -1467,6 +1485,9 @@ const pageData = {
                                 <div class="placeholder-img" style="display:flex;">
                                     <i class="fas fa-helicopter"></i>
                                 </div>
+                                <button class="product-share-icon" onclick="event.stopPropagation(); showShareModal('product', '无人机巡田撒药');">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
                             </div>
                             <div class="shop-product-name">无人机巡田撒药</div>
                             <div class="shop-product-price">¥20元/亩</div>
@@ -1477,6 +1498,9 @@ const pageData = {
                                 <div class="placeholder-img" style="display:flex;">
                                     <i class="fas fa-cog"></i>
                                 </div>
+                                <button class="product-share-icon" onclick="event.stopPropagation(); showShareModal('product', '无人机服务');">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
                             </div>
                             <div class="shop-product-name">无人机服务</div>
                             <div class="shop-product-price">¥16元/亩</div>
@@ -1487,6 +1511,9 @@ const pageData = {
                                 <div class="placeholder-img" style="display:flex;">
                                     <i class="fas fa-helicopter"></i>
                                 </div>
+                                <button class="product-share-icon" onclick="event.stopPropagation(); showShareModal('product', '无人机巡田');">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
                             </div>
                             <div class="shop-product-name">无人机巡田</div>
                             <div class="shop-product-price">¥23元/亩</div>
@@ -1497,6 +1524,9 @@ const pageData = {
                                 <div class="placeholder-img" style="display:flex;">
                                     <i class="fas fa-tractor"></i>
                                 </div>
+                                <button class="product-share-icon" onclick="event.stopPropagation(); showShareModal('product', '拖拉机耕地');">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
                             </div>
                             <div class="shop-product-name">拖拉机耕地</div>
                             <div class="shop-product-price">¥45元/亩</div>
@@ -1507,6 +1537,9 @@ const pageData = {
                                 <div class="placeholder-img" style="display:flex;">
                                     <i class="fas fa-tractor"></i>
                                 </div>
+                                <button class="product-share-icon" onclick="event.stopPropagation(); showShareModal('product', '联合收割机');">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
                             </div>
                             <div class="shop-product-name">联合收割机</div>
                             <div class="shop-product-price">¥58元/亩</div>
@@ -2349,10 +2382,10 @@ const pageData = {
                 
                 <!-- 浮动按钮 -->
                 <div class="floating-buttons">
-                    <div class="fab ai-assistant">
+                    <div class="float-action-btn ai-assistant">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <div class="fab customer-service">
+                    <div class="float-action-btn customer-service">
                         <i class="fas fa-headset"></i>
                     </div>
                 </div>
@@ -2668,7 +2701,7 @@ const pageData = {
                 </div>
                 
                 <!-- 悬浮添加按钮 -->
-                <div class="fab">
+                <div class="float-action-btn">
                     <i class="fas fa-plus"></i>
                 </div>
             </div>
@@ -2744,7 +2777,7 @@ const pageData = {
                 </div>
 
                 <!-- 悬浮添加按钮 -->
-                <div class="fab">
+                <div class="float-action-btn">
                     <i class="fas fa-plus"></i>
                 </div>
             </div>
@@ -3307,7 +3340,7 @@ const pageData = {
                 </div>
 
                 <!-- 悬浮添加按钮 -->
-                <div class="fab">
+                <div class="float-action-btn">
                     <i class="fas fa-plus"></i>
                 </div>
             </div>
@@ -4239,7 +4272,7 @@ const pageData = {
                 </div>
 
                 <!-- 浮动添加按钮 -->
-                <div class="fab">
+                <div class="float-action-btn">
                     <i class="fas fa-plus"></i>
                 </div>
             </div>
@@ -7555,3 +7588,729 @@ function stopInactivityTimer() {
         inactivityCheckTimer = null;
     }
 }
+
+// ===== 分享功能 =====
+let currentShareType = '';
+let currentShareTitle = '';
+
+// 显示分享选项弹窗
+function showShareModal(type, title) {
+    currentShareType = type;
+    currentShareTitle = title;
+    
+    // 创建遮罩层和弹窗
+    const modalHTML = `
+        <div class="share-modal-overlay" id="shareModalOverlay" onclick="closeShareModal()">
+            <div class="share-modal" onclick="event.stopPropagation()">
+                <div class="share-modal-header">
+                    <h3>分享到</h3>
+                    <button class="share-close-btn" onclick="closeShareModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="share-options">
+                    <div class="share-option" onclick="shareToWechat()">
+                        <div class="share-icon wechat">
+                            <i class="fab fa-weixin"></i>
+                        </div>
+                        <span>微信</span>
+                    </div>
+                    <div class="share-option" onclick="shareToMoments()">
+                        <div class="share-icon moments">
+                            <i class="fas fa-circle-notch"></i>
+                        </div>
+                        <span>朋友圈</span>
+                    </div>
+                    <div class="share-option" onclick="shareToDouyin()">
+                        <div class="share-icon douyin">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <span>抖音</span>
+                    </div>
+                    <div class="share-option" onclick="shareToImage()">
+                        <div class="share-icon image">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <span>生成图片</span>
+                    </div>
+                    <div class="share-option" onclick="copyLink()">
+                        <div class="share-icon link">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <span>复制链接</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // 插入到手机屏幕内
+    const phoneContent = document.getElementById('phoneContent');
+    if (phoneContent) {
+        phoneContent.insertAdjacentHTML('beforeend', modalHTML);
+    }
+}
+
+// 关闭分享弹窗
+function closeShareModal() {
+    const overlay = document.getElementById('shareModalOverlay');
+    if (overlay) {
+        overlay.remove();
+    }
+}
+
+// 分享到微信
+function shareToWechat() {
+    closeShareModal();
+    loadPage('wechatShare');
+}
+
+// 分享到朋友圈
+function shareToMoments() {
+    closeShareModal();
+    showNotification('朋友圈分享功能已触发，图片已保存', 'success');
+    shareToImage();
+}
+
+// 分享到抖音
+function shareToDouyin() {
+    closeShareModal();
+    showNotification('抖音分享功能已触发，跳转到抖音...', 'info');
+    setTimeout(() => {
+        showNotification('图片已保存到相册，请在抖音中选择', 'success');
+    }, 1500);
+}
+
+// 生成分享图片
+function shareToImage() {
+    closeShareModal();
+    showPosterModal();
+}
+
+// 显示海报预览弹窗
+function showPosterModal() {
+    const posterContent = currentShareType === 'shop' ? getShopPosterHTML() : getProductPosterHTML();
+    
+    const modalHTML = `
+        <div class="poster-modal-overlay" id="posterModalOverlay" onclick="closePosterModal()">
+            <div class="poster-modal" onclick="event.stopPropagation()">
+                <div class="poster-modal-header">
+                    <h3>分享海报</h3>
+                    <button class="poster-close-btn" onclick="closePosterModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="poster-modal-content">
+                    ${posterContent}
+                </div>
+                <div class="poster-modal-footer">
+                    <button class="poster-save-btn" onclick="savePosterFromModal()">
+                        <i class="fas fa-download"></i> 保存图片
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    const phoneContent = document.getElementById('phoneContent');
+    if (phoneContent) {
+        phoneContent.insertAdjacentHTML('beforeend', modalHTML);
+    }
+}
+
+// 关闭海报弹窗
+function closePosterModal() {
+    const overlay = document.getElementById('posterModalOverlay');
+    if (overlay) {
+        overlay.remove();
+    }
+}
+
+// 从弹窗保存海报
+function savePosterFromModal() {
+    showNotification('海报已保存到相册', 'success');
+    setTimeout(() => {
+        closePosterModal();
+    }, 1000);
+}
+
+// 生成店铺海报HTML
+function getShopPosterHTML() {
+    return `
+        <div class="poster-card shop-poster">
+            <div class="poster-top-banner">
+                <div class="banner-badge">源直达</div>
+                <h2 class="poster-title">农跃帮小店</h2>
+                <div class="poster-subtitle">新鲜农产品·专业农资·智能农机</div>
+            </div>
+            
+            <div class="poster-products">
+                <div class="poster-product-row">
+                    <div class="poster-product-item">
+                        <div class="poster-product-img">
+                            <i class="fas fa-helicopter"></i>
+                        </div>
+                        <div class="poster-product-name">无人机撒药</div>
+                        <div class="poster-product-price">¥20元/亩</div>
+                    </div>
+                    <div class="poster-product-item">
+                        <div class="poster-product-img">
+                            <i class="fas fa-helicopter"></i>
+                        </div>
+                        <div class="poster-product-name">无人机巡田</div>
+                        <div class="poster-product-price">¥23元/亩</div>
+                    </div>
+                </div>
+                <div class="poster-product-row">
+                    <div class="poster-product-item">
+                        <div class="poster-product-img">
+                            <i class="fas fa-tractor"></i>
+                        </div>
+                        <div class="poster-product-name">拖拉机耕地</div>
+                        <div class="poster-product-price">¥45元/亩</div>
+                    </div>
+                    <div class="poster-product-item">
+                        <div class="poster-product-img">
+                            <i class="fas fa-tractor"></i>
+                        </div>
+                        <div class="poster-product-name">联合收割机</div>
+                        <div class="poster-product-price">¥58元/亩</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="poster-bottom">
+                <div class="poster-qr">
+                    <div class="qr-code">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <div class="qr-text">长按识别二维码<br>进店选购</div>
+                </div>
+                <div class="poster-slogan">
+                    <div class="slogan-big">引领农业未来</div>
+                    <div class="slogan-small">让农业更美好</div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// 生成商品海报HTML
+function getProductPosterHTML() {
+    return `
+        <div class="poster-card product-poster">
+            <div class="product-poster-header">
+                <h2 class="poster-product-title">爆款直降</h2>
+                <div class="poster-product-subtitle">精选农资 低价抢鲜</div>
+            </div>
+            
+            <div class="product-poster-main">
+                <div class="main-product-display">
+                    <div class="main-product-img">
+                        <img src="玉米病虫害01.png" alt="商品" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="placeholder-img" style="display:none;">
+                            <i class="fas fa-box"></i>
+                        </div>
+                    </div>
+                    <div class="main-product-info">
+                        <h3>史丹利高效氯氰菊酯</h3>
+                        <div class="product-features">
+                            <span class="feature-tag">高效杀虫</span>
+                            <span class="feature-tag">低毒环保</span>
+                            <span class="feature-tag">持效期长</span>
+                        </div>
+                        <div class="product-spec">规格：500ml</div>
+                        <div class="product-poster-price">
+                            <span class="price-label">限时特惠</span>
+                            <span class="price-value">¥25<span class="price-unit">元</span></span>
+                            <span class="original-price">¥88</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>正品保证</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>限时包邮</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-award"></i>
+                        <span>品牌保障</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-poster-footer">
+                <div class="footer-shop-info">
+                    <div class="shop-badge-small">源直达</div>
+                    <span class="shop-name-small">农跃帮小店</span>
+                </div>
+                <div class="footer-qr">
+                    <div class="qr-code-small">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <div class="qr-label">扫码购买</div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// 复制链接
+function copyLink() {
+    closeShareModal();
+    const link = `https://mall.yunnonggu.com/${currentShareType}/${Date.now()}`;
+    
+    // 创建临时输入框复制链接
+    const tempInput = document.createElement('input');
+    tempInput.value = link;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    
+    showNotification('链接已复制到剪贴板', 'success');
+}
+
+// 添加店铺海报页面到pageData
+pageData.shopPoster = {
+    title: '店铺分享海报',
+    subtitle: '生成分享图片',
+    content: `
+        <div class="mobile-page poster-page">
+            <div class="poster-header">
+                <button class="back-btn" onclick="loadPage('shopDetail')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <h1>分享海报</h1>
+                <div class="header-actions"></div>
+            </div>
+            
+            <div class="poster-content">
+                <div class="poster-preview">
+                    <div class="poster-card shop-poster">
+                        <div class="poster-top-banner">
+                            <div class="banner-badge">源直达</div>
+                            <h2 class="poster-title">农跃帮小店</h2>
+                            <div class="poster-subtitle">新鲜农产品·专业农资·智能农机</div>
+                        </div>
+                        
+                        <div class="poster-products">
+                            <div class="poster-product-row">
+                                <div class="poster-product-item">
+                                    <div class="poster-product-img">
+                                        <i class="fas fa-helicopter"></i>
+                                    </div>
+                                    <div class="poster-product-name">无人机撒药</div>
+                                    <div class="poster-product-price">¥20元/亩</div>
+                                </div>
+                                <div class="poster-product-item">
+                                    <div class="poster-product-img">
+                                        <i class="fas fa-helicopter"></i>
+                                    </div>
+                                    <div class="poster-product-name">无人机巡田</div>
+                                    <div class="poster-product-price">¥23元/亩</div>
+                                </div>
+                            </div>
+                            <div class="poster-product-row">
+                                <div class="poster-product-item">
+                                    <div class="poster-product-img">
+                                        <i class="fas fa-tractor"></i>
+                                    </div>
+                                    <div class="poster-product-name">拖拉机耕地</div>
+                                    <div class="poster-product-price">¥45元/亩</div>
+                                </div>
+                                <div class="poster-product-item">
+                                    <div class="poster-product-img">
+                                        <i class="fas fa-tractor"></i>
+                                    </div>
+                                    <div class="poster-product-name">联合收割机</div>
+                                    <div class="poster-product-price">¥58元/亩</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="poster-bottom">
+                            <div class="poster-qr">
+                                <div class="qr-code">
+                                    <i class="fas fa-qrcode"></i>
+                                </div>
+                                <div class="qr-text">长按识别二维码<br>进店选购</div>
+                            </div>
+                            <div class="poster-slogan">
+                                <div class="slogan-big">引领农业未来</div>
+                                <div class="slogan-small">让农业更美好</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="poster-actions">
+                    <button class="poster-btn save-btn" onclick="savePoster()">
+                        <i class="fas fa-download"></i> 保存图片
+                    </button>
+                    <button class="poster-btn share-btn" onclick="showShareModal('shop', '农跃帮小店')">
+                        <i class="fas fa-share-alt"></i> 继续分享
+                    </button>
+                </div>
+            </div>
+        </div>
+    `
+};
+
+// 添加商品海报页面到pageData
+pageData.productPoster = {
+    title: '商品分享海报',
+    subtitle: '生成分享图片',
+    content: `
+        <div class="mobile-page poster-page">
+            <div class="poster-header">
+                <button class="back-btn" onclick="loadPage('productDetail')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <h1>分享海报</h1>
+                <div class="header-actions"></div>
+            </div>
+            
+            <div class="poster-content">
+                <div class="poster-preview">
+                    <div class="poster-card product-poster">
+                        <div class="product-poster-header">
+                            <h2 class="poster-product-title">爆款直降</h2>
+                            <div class="poster-product-subtitle">精选农资 低价抢鲜</div>
+                        </div>
+                        
+                        <div class="product-poster-main">
+                            <div class="main-product-display">
+                                <div class="main-product-img">
+                                    <img src="玉米病虫害01.png" alt="商品" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                                    <div class="placeholder-img" style="display:none;">
+                                        <i class="fas fa-box"></i>
+                                    </div>
+                                </div>
+                                <div class="main-product-info">
+                                    <h3>史丹利高效氯氰菊酯</h3>
+                                    <div class="product-features">
+                                        <span class="feature-tag">高效杀虫</span>
+                                        <span class="feature-tag">低毒环保</span>
+                                        <span class="feature-tag">持效期长</span>
+                                    </div>
+                                    <div class="product-spec">规格：500ml</div>
+                                    <div class="product-poster-price">
+                                        <span class="price-label">限时特惠</span>
+                                        <span class="price-value">¥25<span class="price-unit">元</span></span>
+                                        <span class="original-price">¥88</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>正品保证</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-shipping-fast"></i>
+                                    <span>限时包邮</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-award"></i>
+                                    <span>品牌保障</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-poster-footer">
+                            <div class="footer-shop-info">
+                                <div class="shop-badge-small">源直达</div>
+                                <span class="shop-name-small">农跃帮小店</span>
+                            </div>
+                            <div class="footer-qr">
+                                <div class="qr-code-small">
+                                    <i class="fas fa-qrcode"></i>
+                                </div>
+                                <div class="qr-label">扫码购买</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="poster-actions">
+                    <button class="poster-btn save-btn" onclick="savePoster()">
+                        <i class="fas fa-download"></i> 保存图片
+                    </button>
+                    <button class="poster-btn share-btn" onclick="showShareModal('product', '史丹利高效氯氰菊酯')">
+                        <i class="fas fa-share-alt"></i> 继续分享
+                    </button>
+                </div>
+            </div>
+        </div>
+    `
+};
+
+// 添加微信分享页面
+pageData.wechatShare = {
+    title: '微信分享',
+    subtitle: '选择聊天',
+    content: `
+        <div class="mobile-page wechat-share-page">
+            <div class="wechat-header">
+                <button class="back-btn" onclick="closeShareModal(); loadPage('shopDetail')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <h1>选择聊天</h1>
+                <div class="header-actions">
+                    <input type="text" class="wechat-search" placeholder="搜索">
+                </div>
+            </div>
+            
+            <div class="wechat-content">
+                <div class="wechat-contact-list">
+                    <div class="wechat-contact" onclick="selectWechatContact('张三')">
+                        <div class="contact-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-name">张三</div>
+                            <div class="contact-msg">农业种植户</div>
+                        </div>
+                    </div>
+                    
+                    <div class="wechat-contact" onclick="selectWechatContact('李四')">
+                        <div class="contact-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-name">李四</div>
+                            <div class="contact-msg">合作社负责人</div>
+                        </div>
+                    </div>
+                    
+                    <div class="wechat-contact" onclick="selectWechatContact('王五')">
+                        <div class="contact-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-name">王五</div>
+                            <div class="contact-msg">农资经销商</div>
+                        </div>
+                    </div>
+                    
+                    <div class="wechat-contact" onclick="selectWechatContact('农业技术交流群')">
+                        <div class="contact-avatar group">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-name">农业技术交流群</div>
+                            <div class="contact-msg">群聊(128人)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `
+};
+
+// 选择微信联系人
+function selectWechatContact(contactName) {
+    loadPage('wechatChat', contactName);
+}
+
+// 添加微信聊天页面
+pageData.wechatChat = {
+    title: '微信聊天',
+    subtitle: '聊天界面',
+    content: `
+        <div class="mobile-page wechat-chat-page">
+            <div class="wechat-chat-header">
+                <button class="back-btn" onclick="loadPage('wechatShare')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <h1 id="chatContactName">张三</h1>
+                <div class="header-actions">
+                    <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+            </div>
+            
+            <div class="wechat-chat-content">
+                <div class="chat-messages">
+                    <div class="chat-date">今天 14:30</div>
+                    
+                    <div class="message-item sent">
+                        <div class="message-avatar me">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="message-bubble share-card" onclick="openSharedLink()">
+                            <div class="share-card-image">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="share-card-content">
+                                <div class="share-card-title">${currentShareTitle}</div>
+                                <div class="share-card-desc">新鲜农产品，专业农资，智能农机</div>
+                                <div class="share-card-footer">
+                                    <i class="fas fa-link"></i>
+                                    <span>云农谷商城</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="wechat-chat-input">
+                <button class="input-tool-btn"><i class="fas fa-microphone"></i></button>
+                <input type="text" class="chat-input" placeholder="发送消息">
+                <button class="input-tool-btn"><i class="fas fa-smile"></i></button>
+                <button class="input-tool-btn"><i class="fas fa-plus-circle"></i></button>
+            </div>
+        </div>
+    `
+};
+
+// 打开分享的链接
+function openSharedLink() {
+    loadPage('h5Preview');
+}
+
+// 添加H5预览页面
+pageData.h5Preview = {
+    title: 'H5预览',
+    subtitle: '分享链接预览',
+    content: `
+        <div class="mobile-page h5-preview-page">
+            <div class="h5-header">
+                <button class="back-btn" onclick="loadPage('wechatChat')">
+                    <i class="fas fa-times"></i>
+                </button>
+                <h1>云农谷商城</h1>
+                <div class="header-actions">
+                    <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+            </div>
+            
+            <div class="h5-content">
+                ${currentShareType === 'shop' ? `
+                    <div class="h5-shop-preview">
+                        <div class="h5-shop-banner">
+                            <div class="h5-shop-logo">
+                                <span class="badge-text">源直达</span>
+                            </div>
+                            <h2 class="h5-shop-name">农跃帮小店</h2>
+                            <div class="h5-shop-intro">新鲜农产品，专业农资，智能农机，引领农业未来</div>
+                            <button class="h5-follow-btn">
+                                <i class="fas fa-plus"></i> 关注店铺
+                            </button>
+                        </div>
+                        
+                        <div class="h5-shop-products">
+                            <h3 class="section-title">热门服务</h3>
+                            <div class="h5-products-grid">
+                                <div class="h5-product-card">
+                                    <div class="h5-product-img">
+                                        <i class="fas fa-helicopter"></i>
+                                    </div>
+                                    <div class="h5-product-name">无人机撒药</div>
+                                    <div class="h5-product-price">¥20元/亩</div>
+                                </div>
+                                <div class="h5-product-card">
+                                    <div class="h5-product-img">
+                                        <i class="fas fa-helicopter"></i>
+                                    </div>
+                                    <div class="h5-product-name">无人机巡田</div>
+                                    <div class="h5-product-price">¥23元/亩</div>
+                                </div>
+                                <div class="h5-product-card">
+                                    <div class="h5-product-img">
+                                        <i class="fas fa-tractor"></i>
+                                    </div>
+                                    <div class="h5-product-name">拖拉机耕地</div>
+                                    <div class="h5-product-price">¥45元/亩</div>
+                                </div>
+                                <div class="h5-product-card">
+                                    <div class="h5-product-img">
+                                        <i class="fas fa-tractor"></i>
+                                    </div>
+                                    <div class="h5-product-name">联合收割机</div>
+                                    <div class="h5-product-price">¥58元/亩</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="h5-login-prompt">
+                            <button class="h5-login-btn" onclick="showH5Login()">
+                                <i class="fas fa-user"></i> 登录查看更多
+                            </button>
+                        </div>
+                    </div>
+                ` : `
+                    <div class="h5-product-preview">
+                        <div class="h5-product-banner">
+                            <img src="玉米病虫害01.png" alt="商品" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="h5-banner-placeholder" style="display:none;">
+                                <i class="fas fa-box"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="h5-product-info">
+                            <h2 class="h5-product-title">史丹利高效氯氰菊酯</h2>
+                            <div class="h5-product-price-section">
+                                <span class="h5-price-value">¥25</span>
+                                <span class="h5-price-unit">元</span>
+                                <span class="h5-original-price">¥88</span>
+                            </div>
+                            <div class="h5-product-tags">
+                                <span class="h5-tag">高效杀虫</span>
+                                <span class="h5-tag">低毒环保</span>
+                                <span class="h5-tag">持效期长</span>
+                            </div>
+                            <div class="h5-product-desc">
+                                <h4>产品特点</h4>
+                                <p>规格：500ml | 产品毒性：低毒 | 产品剂型：水剂</p>
+                                <p>防治对象：红蜘蛛等多种害虫</p>
+                            </div>
+                        </div>
+                        
+                        <div class="h5-login-prompt">
+                            <button class="h5-login-btn" onclick="showH5Login()">
+                                <i class="fas fa-shopping-cart"></i> 登录购买
+                            </button>
+                        </div>
+                    </div>
+                `}
+            </div>
+        </div>
+    `
+};
+
+// 显示H5登录
+function showH5Login() {
+    showNotification('跳转到登录页面...', 'info');
+    setTimeout(() => {
+        showNotification('登录成功！', 'success');
+    }, 1500);
+}
+
+// 保存海报
+function savePoster() {
+    showNotification('海报已保存到相册', 'success');
+}
+
+// 将函数暴露到全局
+window.showShareModal = showShareModal;
+window.closeShareModal = closeShareModal;
+window.shareToWechat = shareToWechat;
+window.shareToMoments = shareToMoments;
+window.shareToDouyin = shareToDouyin;
+window.shareToImage = shareToImage;
+window.copyLink = copyLink;
+window.selectWechatContact = selectWechatContact;
+window.openSharedLink = openSharedLink;
+window.showH5Login = showH5Login;
+window.savePoster = savePoster;
+window.showPosterModal = showPosterModal;
+window.closePosterModal = closePosterModal;
+window.savePosterFromModal = savePosterFromModal;
