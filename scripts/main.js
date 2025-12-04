@@ -1781,6 +1781,9 @@ const pageData = {
                                     </a>
                                 </div>
                                 <div class="product-mgmt-actions">
+                                    <button class="product-share-btn-mgmt" onclick="event.stopPropagation(); showShareModal('product', '鲁花13号10斤');">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
                                     <a href="javascript:void(0)" class="view-link">查看</a>
                                     <button class="offline-btn">下架</button>
                                 </div>
@@ -1806,6 +1809,9 @@ const pageData = {
                                     </a>
                                 </div>
                                 <div class="product-mgmt-actions">
+                                    <button class="product-share-btn-mgmt" onclick="event.stopPropagation(); showShareModal('product', '鲁花13号10斤');">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
                                     <a href="javascript:void(0)" class="view-link">查看</a>
                                     <button class="offline-btn">下架</button>
                                 </div>
@@ -1830,6 +1836,9 @@ const pageData = {
                                     </a>
                                 </div>
                                 <div class="product-mgmt-actions">
+                                    <button class="product-share-btn-mgmt" onclick="event.stopPropagation(); showShareModal('product', '鲁花13号10斤');">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
                                     <a href="javascript:void(0)" class="view-link">查看</a>
                                     <button class="offline-btn">下架</button>
                                 </div>
@@ -1854,6 +1863,9 @@ const pageData = {
                                     </a>
                                 </div>
                                 <div class="product-mgmt-actions">
+                                    <button class="product-share-btn-mgmt" onclick="event.stopPropagation(); showShareModal('product', '濮科花20号花生');">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
                                     <a href="javascript:void(0)" class="view-link">查看</a>
                                     <button class="offline-btn">下架</button>
                                 </div>
@@ -1909,6 +1921,9 @@ const pageData = {
                 <div class="mobile-content">
                     <div class="service-mgmt-list">
                         <div class="service-mgmt-item">
+                            <button class="service-share-btn" onclick="event.stopPropagation(); showShareModal('service', '测试服务');">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
                             <div class="service-mgmt-title">测试服务</div>
                             <div class="service-mgmt-details">
                                 <div class="service-detail-row">
@@ -1935,6 +1950,9 @@ const pageData = {
                         </div>
 
                         <div class="service-mgmt-item">
+                            <button class="service-share-btn" onclick="event.stopPropagation(); showShareModal('service', '玉米收割');">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
                             <div class="service-mgmt-title">玉米收割</div>
                             <div class="service-mgmt-details">
                                 <div class="service-detail-row">
@@ -1966,6 +1984,227 @@ const pageData = {
         `
     },
     
+    pestDiagnosisDetail: {
+        title: '病虫害诊断报告',
+        subtitle: '诊断详情',
+        content: `
+            <div class="mobile-page pest-diagnosis-detail-page">
+                <div class="mobile-header">
+                    <button class="back-btn" onclick="goBack()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h1>诊断报告</h1>
+                    <div class="header-actions">
+                        <button class="share-btn" onclick="showPestDiagnosisShareModal()">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mobile-content">
+                    <!-- 诊断结果卡片 -->
+                    <div class="diagnosis-result-card">
+                        <div class="result-header">
+                            <div class="result-title">玉米叶斑病</div>
+                            <div class="result-confidence">识别准确度: 95%</div>
+                        </div>
+                        <div class="result-image">
+                            <img src="玉米病虫害01.png" alt="病害图片" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-img" style="display:none;">
+                                <i class="fas fa-image"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 病害特征 -->
+                    <div class="diagnosis-section">
+                        <div class="section-title">病害特征</div>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-label">病害类型:</div>
+                                <div class="feature-value">真菌性病害</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-label">主要症状:</div>
+                                <div class="feature-value">叶片出现圆形或不规则形病斑，初期为水渍状，后期变为褐色或灰白色，边缘有黄色晕圈</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-label">发生部位:</div>
+                                <div class="feature-value">主要发生在叶片上，严重时可蔓延至叶鞘和茎秆</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-label">危害程度:</div>
+                                <div class="feature-value">中等</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 防治建议 -->
+                    <div class="diagnosis-section">
+                        <div class="section-title">防治建议</div>
+                        <div class="treatment-list">
+                            <div class="treatment-item">
+                                <div class="treatment-number">1</div>
+                                <div class="treatment-content">
+                                    <div class="treatment-title">农业防治</div>
+                                    <div class="treatment-desc">及时清除田间病残体，合理密植，加强通风透光，增施有机肥，提高植株抗病能力</div>
+                                </div>
+                            </div>
+                            <div class="treatment-item">
+                                <div class="treatment-number">2</div>
+                                <div class="treatment-content">
+                                    <div class="treatment-title">化学防治</div>
+                                    <div class="treatment-desc">发病初期可选用50%多菌灵可湿性粉剂500倍液，或75%百菌清可湿性粉剂600倍液进行喷雾防治，每隔7-10天喷一次，连续2-3次</div>
+                                </div>
+                            </div>
+                            <div class="treatment-item">
+                                <div class="treatment-number">3</div>
+                                <div class="treatment-content">
+                                    <div class="treatment-title">生物防治</div>
+                                    <div class="treatment-desc">可使用枯草芽孢杆菌等生物制剂进行防治，安全环保，对作物无残留</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 诊断信息 -->
+                    <div class="diagnosis-section">
+                        <div class="section-title">诊断信息</div>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="info-label">诊断时间:</span>
+                                <span class="info-value">2025-12-04 14:30</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">诊断地点:</span>
+                                <span class="info-value">河南省许昌市</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">作物品种:</span>
+                                <span class="info-value">玉米</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+    },
+    
+    aiServiceEffectNew: {
+        title: 'AI服务成效',
+        subtitle: '农事服务效果分析',
+        content: `
+            <div class="mobile-page ai-service-effect-new-page">
+                <div class="mobile-header">
+                    <button class="back-btn" onclick="goBack()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h1>AI成效分析</h1>
+                    <div class="header-actions">
+                        <button class="share-btn" onclick="showServiceEffectShareModal()">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mobile-content">
+                    <!-- AI服务成效标题 -->
+                    <div class="effect-main-title">
+                        <div class="title-text">AI服务成效</div>
+                        <div class="title-subtitle">AI技术驱动的农事服务效果分析</div>
+                    </div>
+
+                    <!-- KPI指标卡片 -->
+                    <div class="kpi-cards-grid">
+                        <div class="kpi-card">
+                            <div class="kpi-value">75%</div>
+                            <div class="kpi-label">打药前杂草占比</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-value">15%</div>
+                            <div class="kpi-label">打药后杂草占比</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-value">60%</div>
+                            <div class="kpi-label">杂草占比降低量</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-value">80%</div>
+                            <div class="kpi-label">杂草控制有效率</div>
+                        </div>
+                    </div>
+
+                    <!-- AI农事前后对比分析 -->
+                    <div class="comparison-section">
+                        <div class="section-header-blue">
+                            <span>··· AI农事前后对比分析 ···</span>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="comparison-images">
+                            <div class="comparison-image-item">
+                                <div class="image-label">打药前</div>
+                                <div class="image-placeholder">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                                <div class="image-count">×2张</div>
+                            </div>
+                            <div class="vs-divider">VS</div>
+                            <div class="comparison-image-item">
+                                <div class="image-label">打药后</div>
+                                <div class="image-placeholder">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                                <div class="image-count">×6张</div>
+                            </div>
+                        </div>
+                        <div class="ai-analysis-results">
+                            <div class="analysis-title">AI分析处理</div>
+                            <div class="analysis-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-label">杂草控制有效率</span>
+                                    <span class="metric-value">80%</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">杂草占比降低量</span>
+                                    <span class="metric-value">60%</span>
+                                    <i class="fas fa-arrow-down"></i>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">打药效果</span>
+                                    <span class="metric-value">优秀</span>
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                            <button class="view-detail-btn">查看农事前后对比详情</button>
+                        </div>
+                    </div>
+
+                    <!-- AI洞察报告 -->
+                    <div class="insight-section">
+                        <div class="section-header-blue">
+                            <span>··· AI洞察报告 ···</span>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="insight-content">
+                            <div class="report-title">成效报告</div>
+                            <div class="report-score">总除草成效评分数: 80分</div>
+                            <div class="report-evaluation">除草成效评价: 优秀</div>
+                            <div class="report-comparison">
+                                <div class="comparison-title">对比分析:</div>
+                                <div class="comparison-text">通过对除草前后的图片进行对比分析,可以清晰地观察到以下变化:</div>
+                                <div class="comparison-point">
+                                    <div class="point-number">1.</div>
+                                    <div class="point-content">
+                                        <div class="point-title">杂草覆盖率显著降低:</div>
+                                        <div class="point-detail">◎除草前的图片显示,田间杂草覆盖面积较大,整体杂草覆盖率约为75%。杂草分布广泛,尤其是在作物行间和边缘区域,形成了密集的杂草带。</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+    },
+    
     ai: {
         title: 'AI智能助手',
         subtitle: '全方位AI能力展示',
@@ -1990,6 +2229,25 @@ const pageData = {
                                     <span class="feature-tag">图片识别</span>
                                     <span class="feature-tag">专家建议</span>
                                     <span class="feature-tag">防治方案</span>
+                                </div>
+                            </div>
+                            <div class="capability-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+
+                        <!-- 农事服务效果 -->
+                        <div class="ai-capability-card" onclick="loadPage('aiServiceEffectNew')">
+                            <div class="capability-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="capability-content">
+                                <h3>农事服务效果</h3>
+                                <p>AI技术驱动的农事服务效果分析，前后对比，成效评估</p>
+                                <div class="capability-features">
+                                    <span class="feature-tag">效果分析</span>
+                                    <span class="feature-tag">前后对比</span>
+                                    <span class="feature-tag">成效报告</span>
                                 </div>
                             </div>
                             <div class="capability-arrow">
@@ -8105,7 +8363,16 @@ function shareToImage() {
 
 // 显示海报预览弹窗
 function showPosterModal() {
-    const posterContent = currentShareType === 'shop' ? getShopPosterHTML() : getProductPosterHTML();
+    let posterContent;
+    if (currentShareType === 'shop') {
+        posterContent = getShopPosterHTML();
+    } else if (currentShareType === 'pestDiagnosis') {
+        posterContent = getPestDiagnosisPosterHTML();
+    } else if (currentShareType === 'serviceEffect') {
+        posterContent = getServiceEffectPosterHTML();
+    } else {
+        posterContent = getProductPosterHTML();
+    }
     
     const modalHTML = `
         <div class="poster-modal-overlay" id="posterModalOverlay" onclick="closePosterModal()">
@@ -8271,6 +8538,99 @@ function getProductPosterHTML() {
                     </div>
                     <div class="qr-label">扫码购买</div>
                 </div>
+            </div>
+        </div>
+    `;
+}
+
+// 生成病虫害诊断报告海报HTML
+function getPestDiagnosisPosterHTML() {
+    return `
+        <div class="poster-card pest-diagnosis-poster">
+            <div class="poster-header-section">
+                <div class="poster-title-large">病虫害诊断报告</div>
+                <div class="poster-subtitle-small">AI智能诊断 · 专业建议</div>
+            </div>
+            <div class="poster-diagnosis-content">
+                <div class="diagnosis-result-box">
+                    <div class="diagnosis-disease-name">玉米叶斑病</div>
+                    <div class="diagnosis-confidence">识别准确度: 95%</div>
+                </div>
+                <div class="diagnosis-image-box">
+                    <img src="玉米病虫害01.png" alt="病害图片" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <div class="placeholder-img" style="display:none;">
+                        <i class="fas fa-image"></i>
+                    </div>
+                </div>
+                <div class="diagnosis-features">
+                    <div class="feature-row"><strong>病害类型:</strong> 真菌性病害</div>
+                    <div class="feature-row"><strong>危害程度:</strong> 中等</div>
+                    <div class="feature-row"><strong>主要症状:</strong> 叶片出现圆形或不规则形病斑</div>
+                </div>
+            </div>
+            <div class="poster-footer-qr">
+                <div class="qr-code-large">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+                <div class="qr-text">扫码查看完整报告</div>
+            </div>
+        </div>
+    `;
+}
+
+// 生成农事服务效果海报HTML
+function getServiceEffectPosterHTML() {
+    return `
+        <div class="poster-card service-effect-poster">
+            <div class="poster-header-section">
+                <div class="poster-title-large">AI服务成效</div>
+                <div class="poster-subtitle-small">AI技术驱动的农事服务效果分析</div>
+            </div>
+            <div class="poster-kpi-section">
+                <div class="kpi-row">
+                    <div class="kpi-item-poster">
+                        <div class="kpi-value-poster">75%</div>
+                        <div class="kpi-label-poster">打药前杂草占比</div>
+                    </div>
+                    <div class="kpi-item-poster">
+                        <div class="kpi-value-poster">15%</div>
+                        <div class="kpi-label-poster">打药后杂草占比</div>
+                    </div>
+                </div>
+                <div class="kpi-row">
+                    <div class="kpi-item-poster">
+                        <div class="kpi-value-poster">60%</div>
+                        <div class="kpi-label-poster">杂草占比降低量</div>
+                    </div>
+                    <div class="kpi-item-poster">
+                        <div class="kpi-value-poster">80%</div>
+                        <div class="kpi-label-poster">杂草控制有效率</div>
+                    </div>
+                </div>
+            </div>
+            <div class="poster-comparison-section">
+                <div class="comparison-title">AI农事前后对比分析</div>
+                <div class="comparison-images-poster">
+                    <div class="comparison-item-poster">
+                        <div class="comp-label">打药前</div>
+                        <div class="comp-placeholder"><i class="fas fa-image"></i></div>
+                    </div>
+                    <div class="vs-text">VS</div>
+                    <div class="comparison-item-poster">
+                        <div class="comp-label">打药后</div>
+                        <div class="comp-placeholder"><i class="fas fa-image"></i></div>
+                    </div>
+                </div>
+                <div class="effect-summary">
+                    <div class="summary-item">杂草控制有效率: <strong>80%</strong></div>
+                    <div class="summary-item">打药效果: <strong>优秀</strong></div>
+                </div>
+            </div>
+            <div class="poster-footer-qr">
+                <div class="qr-code-large">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+                <div class="qr-text">扫码查看完整报告</div>
             </div>
         </div>
     `;
@@ -8718,10 +9078,26 @@ function savePoster() {
 // 将函数暴露到全局
 window.showShareModal = showShareModal;
 window.closeShareModal = closeShareModal;
+// 显示病虫害诊断分享弹窗
+function showPestDiagnosisShareModal() {
+    currentShareType = 'pestDiagnosis';
+    currentShareTitle = '玉米叶斑病诊断报告';
+    showShareModal('pestDiagnosis', '玉米叶斑病诊断报告');
+}
+
+// 显示农事服务效果分享弹窗
+function showServiceEffectShareModal() {
+    currentShareType = 'serviceEffect';
+    currentShareTitle = 'AI服务成效分析';
+    showShareModal('serviceEffect', 'AI服务成效分析');
+}
+
 window.shareToWechat = shareToWechat;
 window.shareToMoments = shareToMoments;
 window.shareToDouyin = shareToDouyin;
 window.shareToImage = shareToImage;
+window.showPestDiagnosisShareModal = showPestDiagnosisShareModal;
+window.showServiceEffectShareModal = showServiceEffectShareModal;
 window.copyLink = copyLink;
 window.selectWechatContact = selectWechatContact;
 window.openSharedLink = openSharedLink;

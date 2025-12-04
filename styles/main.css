@@ -10332,6 +10332,18 @@ body {
     background: #f5f5f5;
 }
 
+.my-shop-page .mobile-content {
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.my-shop-page .mobile-content::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
 .my-shop-header {
     background: linear-gradient(135deg, #2eb88a 0%, #3dcea4 100%);
     padding: 12px 16px;
@@ -10566,6 +10578,18 @@ body {
     background: #f5f5f5;
 }
 
+.product-management-page .mobile-content {
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.product-management-page .mobile-content::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
 .product-mgmt-header,
 .service-mgmt-header {
     background: linear-gradient(135deg, #2eb88a 0%, #3dcea4 100%);
@@ -10788,8 +10812,30 @@ body {
 .product-mgmt-actions {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 8px;
     margin-top: 8px;
+}
+
+.product-share-btn-mgmt {
+    background: #e3f2fd;
+    color: #1976d2;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s;
+}
+
+.product-share-btn-mgmt:hover {
+    background: #bbdefb;
+}
+
+.product-share-btn-mgmt i {
+    font-size: 12px;
 }
 
 .view-link {
@@ -10806,6 +10852,7 @@ body {
     border-radius: 4px;
     font-size: 13px;
     cursor: pointer;
+    margin-left: auto;
 }
 
 /* ================================================
@@ -10817,6 +10864,18 @@ body {
     display: flex;
     flex-direction: column;
     background: #f5f5f5;
+}
+
+.service-management-page .mobile-content {
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.service-management-page .mobile-content::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 .service-main-tabs {
@@ -10895,6 +10954,34 @@ body {
     padding: 16px;
     margin-bottom: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.service-share-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+.service-share-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.service-share-btn i {
+    font-size: 14px;
 }
 
 .service-mgmt-title {
@@ -10902,6 +10989,7 @@ body {
     font-weight: 600;
     color: #333;
     margin-bottom: 12px;
+    padding-right: 40px;
 }
 
 .service-mgmt-details {
@@ -10961,6 +11049,655 @@ body {
     color: #999;
     font-size: 13px;
     padding: 20px;
+}
+
+/* ================================================
+   病虫害诊断详情页样式
+   ================================================ */
+
+.pest-diagnosis-detail-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+}
+
+.pest-diagnosis-detail-page .mobile-header {
+    background: linear-gradient(135deg, #2eb88a 0%, #3dcea4 100%);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    flex-shrink: 0;
+}
+
+.pest-diagnosis-detail-page .mobile-header .back-btn,
+.pest-diagnosis-detail-page .mobile-header .share-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.pest-diagnosis-detail-page .mobile-header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+
+.diagnosis-result-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 12px 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.result-header {
+    margin-bottom: 12px;
+}
+
+.result-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.result-confidence {
+    font-size: 14px;
+    color: #2eb88a;
+    font-weight: 600;
+}
+
+.result-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.result-image .placeholder-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e8f5f1 0%, #d4ede4 100%);
+    color: #2eb88a;
+    font-size: 48px;
+}
+
+.diagnosis-section {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 0 16px 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #2eb88a;
+}
+
+.feature-list,
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feature-item,
+.info-item {
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.feature-label,
+.info-label {
+    color: #999;
+    min-width: 80px;
+    font-weight: 500;
+}
+
+.feature-value,
+.info-value {
+    color: #666;
+    flex: 1;
+}
+
+.treatment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.treatment-item {
+    display: flex;
+    gap: 12px;
+}
+
+.treatment-number {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #2eb88a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.treatment-content {
+    flex: 1;
+}
+
+.treatment-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.treatment-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ================================================
+   农事服务效果新页面样式
+   ================================================ */
+
+.ai-service-effect-new-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #e3f2fd 0%, #e8f5e9 100%);
+}
+
+.ai-service-effect-new-page .mobile-header {
+    background: linear-gradient(135deg, #2eb88a 0%, #3dcea4 100%);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    flex-shrink: 0;
+}
+
+.ai-service-effect-new-page .mobile-header .back-btn,
+.ai-service-effect-new-page .mobile-header .share-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.ai-service-effect-new-page .mobile-header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+
+.effect-main-title {
+    text-align: center;
+    padding: 24px 16px;
+    color: white;
+}
+
+.title-text {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.title-subtitle {
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.kpi-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 16px 16px;
+}
+
+.kpi-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kpi-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2eb88a;
+    margin-bottom: 8px;
+}
+
+.kpi-label {
+    font-size: 12px;
+    color: #666;
+}
+
+.comparison-section,
+.insight-section {
+    background: white;
+    border-radius: 16px 16px 0 0;
+    padding: 20px 16px;
+    margin-top: 16px;
+}
+
+.section-header-blue {
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px 12px 0 0;
+    margin: -20px -16px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.section-header-blue i {
+    color: #ffd700;
+    font-size: 12px;
+}
+
+.comparison-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.comparison-image-item {
+    flex: 1;
+    text-align: center;
+}
+
+.image-label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(135deg, #e8f5f1 0%, #d4ede4 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2eb88a;
+    font-size: 32px;
+    margin-bottom: 4px;
+}
+
+.image-count {
+    font-size: 11px;
+    color: #999;
+}
+
+.vs-divider {
+    background: #2196f3;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.ai-analysis-results {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.analysis-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.analysis-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.metric-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.metric-label {
+    color: #666;
+}
+
+.metric-value {
+    color: #2eb88a;
+    font-weight: 600;
+}
+
+.metric-item i {
+    color: #2eb88a;
+    font-size: 12px;
+}
+
+.view-detail-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #2eb88a 0%, #3dcea4 100%);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.insight-content {
+    padding: 16px 0;
+}
+
+.report-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 12px;
+    padding-left: 8px;
+    border-left: 4px solid #2196f3;
+}
+
+.report-score,
+.report-evaluation {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.report-comparison {
+    margin-top: 16px;
+}
+
+.comparison-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.comparison-text {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.comparison-point {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.point-number {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2196f3;
+    flex-shrink: 0;
+}
+
+.point-content {
+    flex: 1;
+}
+
+.point-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.point-detail {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 海报样式 */
+.pest-diagnosis-poster,
+.service-effect-poster {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.poster-header-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.poster-title-large {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.poster-subtitle-small {
+    font-size: 12px;
+    color: #999;
+}
+
+.poster-diagnosis-content {
+    margin-bottom: 20px;
+}
+
+.diagnosis-result-box {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.diagnosis-disease-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.diagnosis-confidence {
+    font-size: 14px;
+    color: #2eb88a;
+}
+
+.diagnosis-image-box {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background: #f5f5f5;
+}
+
+.diagnosis-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.diagnosis-features {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+    color: #666;
+}
+
+.poster-kpi-section {
+    margin-bottom: 20px;
+}
+
+.kpi-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.kpi-item-poster {
+    flex: 1;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.kpi-value-poster {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2eb88a;
+    margin-bottom: 4px;
+}
+
+.kpi-label-poster {
+    font-size: 11px;
+    color: #666;
+}
+
+.poster-comparison-section {
+    margin-bottom: 20px;
+}
+
+.comparison-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.comparison-images-poster {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.comparison-item-poster {
+    flex: 1;
+    text-align: center;
+}
+
+.comp-label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.comp-placeholder {
+    width: 100%;
+    height: 100px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 24px;
+}
+
+.vs-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2196f3;
+}
+
+.effect-summary {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 13px;
+    color: #666;
+}
+
+.summary-item {
+    margin-bottom: 4px;
+}
+
+.summary-item strong {
+    color: #2eb88a;
+}
+
+.poster-footer-qr {
+    text-align: center;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.qr-code-large {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 8px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 40px;
+}
+
+.qr-text {
+    font-size: 12px;
+    color: #999;
 }
     transform: translateY(-2px);
     box-shadow: 0 4px 16px rgba(46, 184, 138, 0.4);
