@@ -1,19 +1,19 @@
 @echo off
 chcp 65001 >nul
 echo ========================================
-echo 开始部署到 GitHub Pages
+echo 开始推送到 GitHub Pages
 echo ========================================
 echo.
 
-echo [1/4] 检查 Git 状态...
+echo [1/5] 检查 Git 状态...
 git status
 echo.
 
-echo [2/4] 添加所有更改的文件...
+echo [2/5] 添加所有更改的文件...
 git add .
 echo.
 
-echo [3/4] 提交更改...
+echo [3/5] 提交更改...
 git commit -m "feat: 添加除草成效分析报告页面及分享功能
 
 - 新增除草成效分析报告页面 (weedControlAnalysisReport)
@@ -22,19 +22,20 @@ git commit -m "feat: 添加除草成效分析报告页面及分享功能
 - 添加报告页面样式和分享海报样式"
 echo.
 
-echo [4/4] 推送到 GitHub...
+echo [4/5] 推送到 GitHub...
 git push origin main
 echo.
 
+echo [5/5] 检查推送状态...
+git status
+echo.
+
 echo ========================================
-echo 部署完成！
+echo 推送完成！
 echo ========================================
 echo.
-echo 请按照以下步骤完成 GitHub Pages 配置：
-echo 1. 打开 GitHub 仓库页面
-echo 2. 进入 Settings -^> Pages
-echo 3. 在 Source 中选择 "GitHub Actions"
-echo 4. 保存设置
+echo GitHub Actions 将自动部署到 GitHub Pages
+echo 请访问仓库的 Actions 标签查看部署进度
 echo.
 echo 部署完成后，网站将在以下地址可用：
 echo https://[您的GitHub用户名].github.io/[仓库名]/
