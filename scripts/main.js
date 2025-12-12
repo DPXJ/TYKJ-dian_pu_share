@@ -232,7 +232,7 @@ const pageData = {
                                 <i class="fas fa-bug"></i>
                                 <span>病虫害诊断</span>
                             </div>
-                            <div class="agent-card" onclick="loadAgentChatPage('weed-control-analysis', '除草成效分析')">
+                            <div class="agent-card" onclick="loadPage('weedControlAnalysisReport')">
                                 <i class="fas fa-spray-can"></i>
                                 <span>除草成效分析</span>
                             </div>
@@ -5064,6 +5064,195 @@ const pageData = {
                 </div>
             </div>
         `
+    },
+
+    weedControlAnalysisReport: {
+        title: '除草成效分析报告',
+        subtitle: 'AI智能分析',
+        content: `
+            <div class="mobile-page weed-control-analysis-report-page">
+                <div class="mobile-header">
+                    <button class="back-btn" onclick="goBack()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h1>除草成效分析</h1>
+                    <div class="header-actions">
+                        <button class="share-btn" onclick="showWeedControlAnalysisShareModal()">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mobile-content">
+                    <!-- 报告标题 -->
+                    <div class="report-main-title">
+                        <div class="title-text">除草成效分析报告</div>
+                        <div class="title-subtitle">AI技术驱动的除草效果智能分析</div>
+                    </div>
+
+                    <!-- 核心指标卡片 -->
+                    <div class="kpi-cards-grid">
+                        <div class="kpi-card">
+                            <div class="kpi-value">85%</div>
+                            <div class="kpi-label">除草前杂草覆盖率</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-value">12%</div>
+                            <div class="kpi-label">除草后杂草覆盖率</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-value">73%</div>
+                            <div class="kpi-label">杂草清除率</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-value">86%</div>
+                            <div class="kpi-label">除草效果评分</div>
+                        </div>
+                    </div>
+
+                    <!-- 除草前后对比 -->
+                    <div class="comparison-section">
+                        <div class="section-header-blue">
+                            <span>··· 除草前后对比分析 ···</span>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="comparison-images">
+                            <div class="comparison-image-item">
+                                <div class="image-label">除草前</div>
+                                <div class="image-placeholder">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                                <div class="image-count">×3张</div>
+                            </div>
+                            <div class="vs-divider">VS</div>
+                            <div class="comparison-image-item">
+                                <div class="image-label">除草后</div>
+                                <div class="image-placeholder">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                                <div class="image-count">×5张</div>
+                            </div>
+                        </div>
+                        <div class="ai-analysis-results">
+                            <div class="analysis-title">AI分析结果</div>
+                            <div class="analysis-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-label">杂草清除率</span>
+                                    <span class="metric-value">73%</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">杂草覆盖率降低</span>
+                                    <span class="metric-value">73%</span>
+                                    <i class="fas fa-arrow-down"></i>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">除草效果</span>
+                                    <span class="metric-value">优秀</span>
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 详细分析报告 -->
+                    <div class="insight-section">
+                        <div class="section-header-blue">
+                            <span>··· AI详细分析报告 ···</span>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="insight-content">
+                            <div class="report-title">除草成效评估</div>
+                            <div class="report-score">总除草成效评分数: 86分</div>
+                            <div class="report-evaluation">除草成效评价: 优秀</div>
+                            <div class="report-comparison">
+                                <div class="comparison-title">对比分析:</div>
+                                <div class="comparison-text">通过对除草前后的图片进行AI智能对比分析，可以清晰地观察到以下变化:</div>
+                                <div class="comparison-point">
+                                    <div class="point-number">1.</div>
+                                    <div class="point-content">
+                                        <div class="point-title">杂草覆盖率显著降低:</div>
+                                        <div class="point-detail">◎除草前的图片显示，田间杂草覆盖面积较大，整体杂草覆盖率约为85%。杂草分布广泛，尤其是在作物行间和边缘区域，形成了密集的杂草带。除草后，杂草覆盖率降至12%，清除效果显著。</div>
+                                    </div>
+                                </div>
+                                <div class="comparison-point">
+                                    <div class="point-number">2.</div>
+                                    <div class="point-content">
+                                        <div class="point-title">作物生长环境明显改善:</div>
+                                        <div class="point-detail">◎除草后，作物行间空间更加开阔，光照条件得到改善，有利于作物进行光合作用。土壤表面更加整洁，减少了杂草对养分的竞争。</div>
+                                    </div>
+                                </div>
+                                <div class="comparison-point">
+                                    <div class="point-number">3.</div>
+                                    <div class="point-content">
+                                        <div class="point-title">除草作业质量评价:</div>
+                                        <div class="point-detail">◎本次除草作业质量优秀，杂草清除率达到73%，除草效果评分为86分。建议继续保持当前除草方案，定期进行除草作业，确保作物生长环境良好。</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 建议与优化 -->
+                    <div class="suggestion-section">
+                        <div class="section-header-blue">
+                            <span>··· 优化建议 ···</span>
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="suggestion-list">
+                            <div class="suggestion-item">
+                                <div class="suggestion-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="suggestion-content">
+                                    <div class="suggestion-title">定期监测</div>
+                                    <div class="suggestion-desc">建议每7-10天进行一次田间巡查，及时发现并清除新生杂草</div>
+                                </div>
+                            </div>
+                            <div class="suggestion-item">
+                                <div class="suggestion-icon">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                                <div class="suggestion-content">
+                                    <div class="suggestion-title">预防措施</div>
+                                    <div class="suggestion-desc">可考虑使用覆盖物或地膜，减少杂草萌发，降低后续除草工作量</div>
+                                </div>
+                            </div>
+                            <div class="suggestion-item">
+                                <div class="suggestion-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="suggestion-content">
+                                    <div class="suggestion-title">作业计划</div>
+                                    <div class="suggestion-desc">建议在作物生长关键期前完成除草作业，避免杂草与作物竞争养分</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 报告信息 -->
+                    <div class="report-info-section">
+                        <div class="section-title">报告信息</div>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="info-label">分析时间:</span>
+                                <span class="info-value">2025-12-04 15:30</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">分析地点:</span>
+                                <span class="info-value">河南省许昌市</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">作物类型:</span>
+                                <span class="info-value">玉米</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">分析方式:</span>
+                                <span class="info-value">AI智能图像识别</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
     }
 };
 let currentPage = 'home';
@@ -6317,7 +6506,7 @@ function addChatMessage(type, content) {
                 <i class="fas fa-robot"></i>
             </div>
             <div class="message-content ai-content">
-                <div class="message-bubble">${content}</div>
+                <div class="message-bubble">${content.replace(/\n/g, '<br>')}</div>
                 <div class="message-actions">
                     <button class="action-btn" onclick="copyMessage(this)" title="复制">
                         <i class="fas fa-copy"></i>
@@ -6343,6 +6532,15 @@ function addChatMessage(type, content) {
 }
 
 function generateAIResponse(userMessage) {
+    // 检测是否询问除草成效相关问题
+    const weedKeywords = ['除草', '成效', '效果', '杂草', '清除', '分析'];
+    const isWeedQuestion = weedKeywords.some(keyword => userMessage.includes(keyword));
+    
+    // 如果是除草成效分析智能体，且询问相关问题，提供跳转链接
+    if (window.currentAgentId === 'weed-control-analysis' && isWeedQuestion) {
+        return `我已经为您准备好了除草成效分析报告！\n\n报告包含以下内容：\n• 除草前后对比分析\n• 核心指标统计\n• AI智能分析结果\n• 优化建议\n\n<a href="javascript:void(0)" onclick="loadPage('weedControlAnalysisReport')" style="color: #2eb88a; text-decoration: underline; font-weight: 600;">点击查看完整报告 →</a>`;
+    }
+    
     // 简单的AI回复生成逻辑
     const responses = [
         `关于"${userMessage}"这个问题，我可以为您提供专业的建议。`,
@@ -8370,6 +8568,8 @@ function showPosterModal() {
         posterContent = getPestDiagnosisPosterHTML();
     } else if (currentShareType === 'serviceEffect') {
         posterContent = getServiceEffectPosterHTML();
+    } else if (currentShareType === 'weedControlAnalysis') {
+        posterContent = getWeedControlAnalysisPosterHTML();
     } else {
         posterContent = getProductPosterHTML();
     }
@@ -8624,6 +8824,64 @@ function getServiceEffectPosterHTML() {
                 <div class="effect-summary">
                     <div class="summary-item">杂草控制有效率: <strong>80%</strong></div>
                     <div class="summary-item">打药效果: <strong>优秀</strong></div>
+                </div>
+            </div>
+            <div class="poster-footer-qr">
+                <div class="qr-code-large">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+                <div class="qr-text">扫码查看完整报告</div>
+            </div>
+        </div>
+    `;
+}
+
+// 生成除草成效分析报告海报HTML
+function getWeedControlAnalysisPosterHTML() {
+    return `
+        <div class="poster-card weed-control-analysis-poster">
+            <div class="poster-header-section">
+                <div class="poster-title-large">除草成效分析报告</div>
+                <div class="poster-subtitle-small">AI技术驱动的除草效果智能分析</div>
+            </div>
+            <div class="poster-kpi-section">
+                <div class="kpi-row">
+                    <div class="kpi-item-poster">
+                        <div class="kpi-value-poster">85%</div>
+                        <div class="kpi-label-poster">除草前杂草覆盖率</div>
+                    </div>
+                    <div class="kpi-item-poster">
+                        <div class="kpi-value-poster">12%</div>
+                        <div class="kpi-label-poster">除草后杂草覆盖率</div>
+                    </div>
+                </div>
+                <div class="kpi-row">
+                    <div class="kpi-item-poster">
+                        <div class="kpi-value-poster">73%</div>
+                        <div class="kpi-label-poster">杂草清除率</div>
+                    </div>
+                    <div class="kpi-item-poster">
+                        <div class="kpi-value-poster">86%</div>
+                        <div class="kpi-label-poster">除草效果评分</div>
+                    </div>
+                </div>
+            </div>
+            <div class="poster-comparison-section">
+                <div class="comparison-title">除草前后对比分析</div>
+                <div class="comparison-images-poster">
+                    <div class="comparison-item-poster">
+                        <div class="comp-label">除草前</div>
+                        <div class="comp-placeholder"><i class="fas fa-image"></i></div>
+                    </div>
+                    <div class="vs-text">VS</div>
+                    <div class="comparison-item-poster">
+                        <div class="comp-label">除草后</div>
+                        <div class="comp-placeholder"><i class="fas fa-image"></i></div>
+                    </div>
+                </div>
+                <div class="effect-summary">
+                    <div class="summary-item">杂草清除率: <strong>73%</strong></div>
+                    <div class="summary-item">除草效果: <strong>优秀</strong></div>
                 </div>
             </div>
             <div class="poster-footer-qr">
@@ -9092,12 +9350,20 @@ function showServiceEffectShareModal() {
     showShareModal('serviceEffect', 'AI服务成效分析');
 }
 
+// 显示除草成效分析分享弹窗
+function showWeedControlAnalysisShareModal() {
+    currentShareType = 'weedControlAnalysis';
+    currentShareTitle = '除草成效分析报告';
+    showShareModal('weedControlAnalysis', '除草成效分析报告');
+}
+
 window.shareToWechat = shareToWechat;
 window.shareToMoments = shareToMoments;
 window.shareToDouyin = shareToDouyin;
 window.shareToImage = shareToImage;
 window.showPestDiagnosisShareModal = showPestDiagnosisShareModal;
 window.showServiceEffectShareModal = showServiceEffectShareModal;
+window.showWeedControlAnalysisShareModal = showWeedControlAnalysisShareModal;
 window.copyLink = copyLink;
 window.selectWechatContact = selectWechatContact;
 window.openSharedLink = openSharedLink;
